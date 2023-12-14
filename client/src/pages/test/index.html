@@ -1636,23 +1636,23 @@ const paths = document.querySelectorAll('#allSvg .allPaths');
 
 // Initialize an object to hold the countries and their paths
 const countriesPaths = {};
-
 // Loop through each path element
 paths.forEach(path => {
     // Get the 'd' attribute (the path data) and the 'id' (country name)
     const d = path.getAttribute('d');
     const countryName = path.getAttribute('id');
-
+    
     // Check if the country name already exists in the object
     if (!countriesPaths[countryName]) {
         // If not, create a new array for this country
         countriesPaths[countryName] = [];
     }
-
+    
     // Add the path data to the country's array
     countriesPaths[countryName].push(d);
 });
 
+console.log('countryPaths', countriesPaths);
 // Convert the object into an array of objects
 const countriesArray = Object.keys(countriesPaths).map(key => {
     return { country: key, paths: countriesPaths[key] };
@@ -1680,7 +1680,7 @@ function arrayToString(countriesArray) {
 
 // Convert the array to a string
 const dataString = arrayToString(countriesArray);
-
+console.log('dataString', dataString);
 // Create a Blob from the string
 const blob = new Blob([dataString], { type: 'text/plain' });
 

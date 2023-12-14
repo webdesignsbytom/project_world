@@ -1678,11 +1678,14 @@
     // Convert the array to a JSON string
     const jsonString = arrayToJsonString(countriesArray);
 
+    console.log('jsonString', jsonString);
+
     // Create a Blob from the JSON string
     const blob = new Blob([jsonString], { type: 'application/json' });
 
     // Get the link element
     const link = document.getElementById('alink');
+    link.onclick = () => link.download
     link.download = 'countriesData.json';
     link.href = window.URL.createObjectURL(blob);
 
