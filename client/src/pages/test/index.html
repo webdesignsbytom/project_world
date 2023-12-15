@@ -1678,22 +1678,6 @@ function arrayToString(countriesArray) {
     }).join('\n');
 }
 
-// Convert the array to a string
-const dataString = arrayToString(countriesArray);
-console.log('dataString', dataString);
-// Create a Blob from the string
-const blob = new Blob([dataString], { type: 'text/plain' });
-
-// Create a link element
-const link = document.getElementById('alink');
-link.download = 'countriesData.txt';
-link.href = window.URL.createObjectURL(blob);
-
-// Append the link to the body and click it to initiate download
-document.body.appendChild(link);
-link.click();
-
-// Clean up: remove the link after downloading
 
 </script>
 

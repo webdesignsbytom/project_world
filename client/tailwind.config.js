@@ -3,6 +3,9 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      animation: {
+        'ocean-animation': 'oceanColourChange 30s infinite' // 5s is the duration, adjust as needed
+      },
       backgroundImage: {
         'green-bg': "url('../assets/img/myea/green-bg1.png')",
       },

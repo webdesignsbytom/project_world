@@ -7,3 +7,15 @@
   -ms-user-select: none;
   user-select: none;
 }
+
+@keyframes oceanColourChange {
+  0%, 100% {
+      background-color: #007bff; /* Initial blue color */
+  }
+  40% {
+      background-color: #0056b3; /* Different shade of blue */
+  }
+  75% {
+      background-color: #042d58; /* Different shade of blue */
+  }
+}
