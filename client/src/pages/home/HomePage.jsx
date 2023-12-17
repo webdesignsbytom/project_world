@@ -1,23 +1,63 @@
 import React, { useContext, useEffect, useState } from 'react';
 // Components
-import { Link, useNavigate } from 'react-router-dom';
 import { ToggleContext } from '../../context/ToggleContext';
 import { CountriesDataArray } from '../../utils/data/CountriesData';
+
 function HomePage() {
   const { setActiveNav } = useContext(ToggleContext);
-
   const [countriesArray, setCountiesArray] = useState(CountriesDataArray);
 
-  console.log('countriesArray', countriesArray);
+  const calculatePosition = (isSun) => {
+    const hour = new Date().getHours();
+    let position;
+    if (isSun) {
+      position = (hour / 24) * 100; // Sun's position calculation
+    } else {
+      position = (((hour + 12) % 24) / 24) * 100; // Moon's position calculation
+    }
+    return position;
+  };
+
+  // Sun and moon
+  const [sunPosition, setSunPosition] = useState(calculatePosition(true));
+  const [moonPosition, setMoonPosition] = useState(calculatePosition(false));
 
   useEffect(() => {
     setActiveNav('/');
+    const interval = setInterval(() => {
+      setSunPosition(calculatePosition(true));
+      setMoonPosition(calculatePosition(false));
+    }, 60000); // Every minute
+    return () => clearInterval(interval);
   }, []);
 
   return (
     <div className='grid font-poppins shadow-[inset_-12px_-8px_40px_#46464690] h-screen max-h-screen overflow-hidden'>
       {/* Main */}
-      <main className='grid h-full p-1 shadow-[inset_-12px_-8px_40px_#46464690] overflow-hidden animate-ocean-animation'>
+      <main className='relative grid h-full p-1 shadow-[inset_-12px_-8px_40px_#46464690] overflow-hidden animate-ocean-animation'>
+        {/* Animated Plane */}
+        <div className='absolute'>✈️</div>
+
+        {/* Sun Icon */}
+        <div
+          className='absolute top-1/2'
+          style={{
+            left: `${sunPosition}%`,
+            transform: 'translate(-50%, -50%)',
+          }}
+        >
+          ☀️
+        </div>
+        {/* Moon Icon */}
+        <div
+          className='absolute top-1/2'
+          style={{
+            left: `${moonPosition}%`,
+            transform: 'translate(-50%, -50%)',
+          }}
+        >
+          🌑
+        </div>
         <svg
           id='allSvg'
           baseProfile='tiny'
