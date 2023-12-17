@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 // Components
 import { ToggleContext } from '../../context/ToggleContext';
 import { CountriesDataArray } from '../../utils/data/CountriesData';
+import RightHandMenuBar from '../../components/settings/RightHandMenuBar';
+import OwnerBanner from '../../components/overlays/OwnerBanner';
 
 function HomePage() {
   const { setActiveNav } = useContext(ToggleContext);
@@ -35,6 +37,8 @@ function HomePage() {
     <div className='grid font-poppins shadow-[inset_-12px_-8px_40px_#46464690] h-screen max-h-screen overflow-hidden'>
       {/* Main */}
       <main className='relative grid h-full p-1 shadow-[inset_-12px_-8px_40px_#46464690] overflow-hidden animate-ocean-animation'>
+        <OwnerBanner />
+        <RightHandMenuBar />
         {/* Animated Plane */}
         <div className='absolute'>✈️</div>
 
