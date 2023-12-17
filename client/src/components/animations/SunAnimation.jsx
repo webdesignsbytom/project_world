@@ -3,7 +3,7 @@ import React from 'react'
 function SunAnimation({ sunPosition }) {
   return (
     <div
-    className='absolute top-1/2'
+    className='absolute top-1/2 text-3xl'
     style={{
       left: `${sunPosition}%`,
       transform: 'translate(-50%, -50%)',

@@ -8,6 +8,7 @@ import PlaneAnimation from '../../components/animations/PlaneAnimation';
 import MoonAnimation from '../../components/animations/MoonAnimation';
 import SunAnimation from '../../components/animations/SunAnimation';
 import CountryDisplayContainer from '../../components/overlays/CountryDisplayContainer';
+import CountryObject from '../../components/countries/CountryObject';
 
 function HomePage() {
   const { setActiveNav } = useContext(ToggleContext);
@@ -78,31 +79,28 @@ function HomePage() {
           version='1.2'
           viewBox='0 0 2000 857'
           xmlns='http://www.w3.org/2000/svg'
-          className='h-full w-full'
+          className='h-full w-full cursor-pointer'
         >
           {countriesArray.map((country) =>
             country.countryBorderPaths.map((territory, territoryIndex) => (
-              <path
-                key={`${country.id}-${territoryIndex}`}
-                className={`${territory.class} ${
-                  hoveredCountry === territory.id ? 'hovered-country countryOutline' : ''
-                }`}
-                d={territory.d}
-                id={territory.id}
-                fill={
-                  activeCountry === territory.id
-                    ? '#66ff66' // Color when a country is hovered
-                    : `${country.defaultColor}` // Random default color assigned to the country
-                }
-                onMouseOver={() => handleMouseOver(territory.id)}
-                onMouseLeave={handleMouseLeave}
+              <CountryObject
+                country={country}
+                territoryIndex={territoryIndex}
+                territory={territory}
+                hoveredCountry={hoveredCountry}
+                activeCountry={activeCountry}
+                handleMouseOver={handleMouseOver}
+                handleMouseLeave={handleMouseLeave}
               />
             ))
           )}
         </svg>
         {/* Display Box */}
         {hoveredCountry && (
-          <CountryDisplayContainer tooltipPosition={tooltipPosition} hoveredCountry={hoveredCountry} />
+          <CountryDisplayContainer
+            tooltipPosition={tooltipPosition}
+            hoveredCountry={hoveredCountry}
+          />
         )}
       </main>
     </div>

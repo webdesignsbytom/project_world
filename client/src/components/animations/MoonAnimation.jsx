@@ -2,15 +2,15 @@ import React from 'react';
 
 function MoonAnimation({ moonPosition }) {
   return (
-    <div
-      className='absolute top-1/2'
+    <section
+      className='absolute top-1/2 text-3xl'
       style={{
         left: `${moonPosition}%`,
         transform: 'translate(-50%, -50%)',
       }}
     >
       🌑
-    </div>
+    </section>
   );
 }
 
