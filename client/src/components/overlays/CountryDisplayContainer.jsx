@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 // Data
 import { TempImageArray } from '../../utils/data/TempImagesArray';
 import Music1 from '../../assets/images/temp/music.mp3'
@@ -6,13 +6,21 @@ import Music1 from '../../assets/images/temp/music.mp3'
 function CountryDisplayContainer({ tooltipPosition, hoveredCountry }) {
   const [tempDataArray, setTempDataArray] = useState(TempImageArray);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const audioRef = useRef(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % TempImageArray.length);
     }, 5000);
 
-    return () => clearInterval(interval);
+    // Play music
+    audioRef.current.play();
+
+    return () => {
+      clearInterval(interval);
+      // Pause music when component unmounts
+      audioRef.current.pause();
+    };
   }, []);
 
   return (
@@ -34,7 +42,7 @@ function CountryDisplayContainer({ tooltipPosition, hoveredCountry }) {
             {hoveredCountry}
           </h2>
         </div>
-        <audio id='backgroundMusic' src={Music1} loop>
+        <audio ref={audioRef} src={Music1} loop muted autoPlay>
           Your browser does not support the audio element.
         </audio>
         <div className='w-full h-full overflow-hidden p-2'>
