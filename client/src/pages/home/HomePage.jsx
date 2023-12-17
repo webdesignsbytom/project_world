@@ -4,11 +4,16 @@ import { ToggleContext } from '../../context/ToggleContext';
 import { CountriesDataArray } from '../../utils/data/CountriesData';
 import RightHandMenuBar from '../../components/settings/RightHandMenuBar';
 import OwnerBanner from '../../components/overlays/OwnerBanner';
+import PlaneAnimation from '../../components/animations/PlaneAnimation';
+import MoonAnimation from '../../components/animations/MoonAnimation';
+import SunAnimation from '../../components/animations/SunAnimation';
+import CountryDisplayContainer from '../../components/overlays/CountryDisplayContainer';
 
 function HomePage() {
   const { setActiveNav } = useContext(ToggleContext);
   const [countriesArray, setCountiesArray] = useState(CountriesDataArray);
-
+  const [activeCountry, setActiveCountry] = useState(null);
+  console.log('countriesArray', countriesArray);
   const calculatePosition = (isSun) => {
     const hour = new Date().getHours();
     let position;
@@ -38,6 +43,7 @@ function HomePage() {
 
   const handleMouseOver = (countryId) => {
     setHoveredCountry(countryId);
+    setActiveCountry(countryId);
     window.onmousemove = (e) => {
       setTooltipPosition({ x: e.clientX, y: e.clientY });
     };
@@ -45,6 +51,7 @@ function HomePage() {
 
   const handleMouseLeave = () => {
     setHoveredCountry(null);
+    setActiveCountry(null);
     window.onmousemove = null;
   };
 
@@ -55,33 +62,16 @@ function HomePage() {
         <OwnerBanner />
         <RightHandMenuBar />
         {/* Animated Plane */}
-        <div className='absolute'>✈️</div>
-        {/* Sun Icon */}
-        <div
-          className='absolute top-1/2'
-          style={{
-            left: `${sunPosition}%`,
-            transform: 'translate(-50%, -50%)',
-          }}
-        >
-          ☀️
-        </div>
-        {/* Moon Icon */}
-        <div
-          className='absolute top-1/2'
-          style={{
-            left: `${moonPosition}%`,
-            transform: 'translate(-50%, -50%)',
-          }}
-        >
-          🌑
-        </div>
-
+        <PlaneAnimation />
+        {/* Sun animation */}
+        <SunAnimation sunPosition={sunPosition} />
+        {/* Moon animation */}
+        <MoonAnimation moonPosition={moonPosition} />
         {/* Map */}
         <svg
           id='allSvg'
           baseProfile='tiny'
-          fill='#ececec'
+          fill='transparent'
           stroke='red'
           strokeLinecap='round'
           strokeLinejoin='round'
@@ -95,29 +85,24 @@ function HomePage() {
               <path
                 key={`${country.id}-${territoryIndex}`}
                 className={`${territory.class} ${
-                  hoveredCountry === territory.id ? 'hovered-country' : ''
+                  hoveredCountry === territory.id ? 'hovered-country countryOutline' : ''
                 }`}
                 d={territory.d}
                 id={territory.id}
+                fill={
+                  activeCountry === territory.id
+                    ? '#66ff66' // Color when a country is hovered
+                    : `${country.defaultColor}` // Random default color assigned to the country
+                }
                 onMouseOver={() => handleMouseOver(territory.id)}
                 onMouseLeave={handleMouseLeave}
               />
             ))
           )}
         </svg>
+        {/* Display Box */}
         {hoveredCountry && (
-          <div
-            id='name'
-            style={{
-              position: 'absolute',
-              top: `${tooltipPosition.y - 60}px`,
-              left: `${tooltipPosition.x + 10}px`,
-              opacity: hoveredCountry ? 1 : 0,
-            }}
-            
-          >
-            <p id='namep'>{hoveredCountry}</p>
-          </div>
+          <CountryDisplayContainer tooltipPosition={tooltipPosition} hoveredCountry={hoveredCountry} />
         )}
       </main>
     </div>

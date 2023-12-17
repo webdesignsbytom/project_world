@@ -19,3 +19,7 @@
       background-color: #042d58; /* Different shade of blue */
   }
 }
+
+.countryOutline {
+  transition: fill 0.3s ease;
+}
