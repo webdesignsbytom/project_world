@@ -43,6 +43,7 @@ function HomePage() {
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
   const handleMouseOver = (countryId) => {
+
     setHoveredCountry(countryId);
     setActiveCountry(countryId);
     window.onmousemove = (e) => {
