@@ -33,6 +33,21 @@ function HomePage() {
     return () => clearInterval(interval);
   }, []);
 
+  const [hoveredCountry, setHoveredCountry] = useState(null);
+  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseOver = (countryId) => {
+    setHoveredCountry(countryId);
+    window.onmousemove = (e) => {
+      setTooltipPosition({ x: e.clientX, y: e.clientY });
+    };
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredCountry(null);
+    window.onmousemove = null;
+  };
+
   return (
     <div className='grid font-poppins shadow-[inset_-12px_-8px_40px_#46464690] h-screen max-h-screen overflow-hidden'>
       {/* Main */}
@@ -41,7 +56,6 @@ function HomePage() {
         <RightHandMenuBar />
         {/* Animated Plane */}
         <div className='absolute'>✈️</div>
-
         {/* Sun Icon */}
         <div
           className='absolute top-1/2'
@@ -62,6 +76,8 @@ function HomePage() {
         >
           🌑
         </div>
+
+        {/* Map */}
         <svg
           id='allSvg'
           baseProfile='tiny'
@@ -78,13 +94,31 @@ function HomePage() {
             country.countryBorderPaths.map((territory, territoryIndex) => (
               <path
                 key={`${country.id}-${territoryIndex}`}
-                className={territory.class}
+                className={`${territory.class} ${
+                  hoveredCountry === territory.id ? 'hovered-country' : ''
+                }`}
                 d={territory.d}
                 id={territory.id}
+                onMouseOver={() => handleMouseOver(territory.id)}
+                onMouseLeave={handleMouseLeave}
               />
             ))
           )}
         </svg>
+        {hoveredCountry && (
+          <div
+            id='name'
+            style={{
+              position: 'absolute',
+              top: `${tooltipPosition.y - 60}px`,
+              left: `${tooltipPosition.x + 10}px`,
+              opacity: hoveredCountry ? 1 : 0,
+            }}
+            
+          >
+            <p id='namep'>{hoveredCountry}</p>
+          </div>
+        )}
       </main>
     </div>
   );
