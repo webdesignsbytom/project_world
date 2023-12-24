@@ -1,12 +1,21 @@
 import React from 'react';
 
 function RightHandMenuBar() {
+  const openSettingsContainer = () => {
+    console.log('openSettingsContainer');
+  };
+  
   return (
-    <div className='grid absolute right-0 top-0 w-[50px] h-full'>
-      <div>
-        COG
+    <section className='grid absolute right-2 top-2 h-full'>
+      <div className='outline outline-1 outline-black h-fit w-fit rounded bg-green-900 p-2'>
+        <div
+          onClick={openSettingsContainer}
+          className='outline outline-1 outline-black rounded-full text-xl p-1 bg-blue-400 hover:brightness-110 cursor-pointer'
+        >
+          ⚙️
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

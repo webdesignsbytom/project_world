@@ -9,6 +9,7 @@ import MoonAnimation from '../../components/animations/MoonAnimation';
 import SunAnimation from '../../components/animations/SunAnimation';
 import CountryDisplayContainer from '../../components/overlays/CountryDisplayContainer';
 import CountryObject from '../../components/countries/CountryObject';
+import SettingsContainer from '../../components/settings/SettingsContainer';
 
 function HomePage() {
   const { setActiveNav } = useContext(ToggleContext);
@@ -61,6 +62,8 @@ function HomePage() {
     <div className='grid font-poppins shadow-[inset_-12px_-8px_40px_#46464690] h-screen max-h-screen overflow-hidden'>
       {/* Main */}
       <main className='relative grid h-full p-1 shadow-[inset_-12px_-8px_40px_#46464690] overflow-hidden animate-ocean-animation'>
+        {/* Settings container */}
+        <SettingsContainer />
         <OwnerBanner />
         <RightHandMenuBar />
         {/* Animated Plane */}
