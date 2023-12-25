@@ -58,12 +58,15 @@ function HomePage() {
     window.onmousemove = null;
   };
 
+  const [settingsMenuIsOpen, setSettingsMenuIsOpen] = useState(false)
+
   return (
     <div className='grid font-poppins shadow-[inset_-12px_-8px_40px_#46464690] h-screen max-h-screen overflow-hidden'>
       {/* Main */}
       <main className='relative grid h-full p-1 shadow-[inset_-12px_-8px_40px_#46464690] overflow-hidden animate-ocean-animation'>
         {/* Settings container */}
-        <SettingsContainer />
+        {settingsMenuIsOpen && <SettingsContainer />}
+        
         <OwnerBanner />
         <RightHandMenuBar />
         {/* Animated Plane */}
