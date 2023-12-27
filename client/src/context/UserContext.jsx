@@ -3,11 +3,12 @@ import { useEffect, useState } from 'react';
 // Fetch
 import client from '../api/client';
 import LoggedInUser from '../utils/LoggedInUser';
+import { useNavigate } from 'react-router-dom';
 // Context
 export const UserContext = React.createContext();
 
 const UserContextProvider = ({ children }) => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState({id: 4});
 
   const [token, setToken] = useState(
     localStorage.getItem(process.env.REACT_APP_USER_TOKEN) || ''
@@ -15,7 +16,7 @@ const UserContextProvider = ({ children }) => {
 
   const [toggleCookiePolicy, setToggleCookiePolicy] = useState(false);
 
-  console.log('usercontext', user);
+  let navigate = useNavigate();
 
   useEffect(() => {
     const decodedUserData = LoggedInUser();
@@ -27,6 +28,8 @@ const UserContextProvider = ({ children }) => {
         .then((res) => {
           setUser(res.data.data.user);
         })
+        .then(() => navigateToMapPage())
+        
         .catch((err) => {
           console.error('Unable to retrieve user data', err);
         });
@@ -38,6 +41,10 @@ const UserContextProvider = ({ children }) => {
       setToggleCookiePolicy(true);
     }
   }, []);
+
+  const navigateToMapPage = () => {
+    navigate('/world-map', { replace: true });
+  };
 
   return (
     <UserContext.Provider

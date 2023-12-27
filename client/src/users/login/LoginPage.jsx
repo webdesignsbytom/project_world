@@ -27,8 +27,8 @@ function LoginPage() {
     setActiveNav('/login')
   }, [])
 
-  const homePage = () => {
-    navigate('/', { replace: true });
+  const navigateToMapPage = () => {
+    navigate('/world-map', { replace: true });
   };
 
   const handleLogin = (event) => {
@@ -46,13 +46,14 @@ function LoginPage() {
         setLoginInProgress(false)
         setUser(res.data.data.existingUser);
       })
-      .then(() => homePage())
+      .then(() => navigateToMapPage())
 
       .catch((err) => {
         setLoginError(true)
         console.error('Unable to login', err);
       });
   };
+
 
   const handleChange = (event) => {
     setLoginError(false);
@@ -64,6 +65,7 @@ function LoginPage() {
     });
   };
 
+  
   const handleCheckedKeepMeLoggedIn = (event) => {
     setLoginFormData({
       ...loginFormData,

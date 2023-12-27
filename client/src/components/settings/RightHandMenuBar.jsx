@@ -1,15 +1,39 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+// Context
+import { ToggleContext } from '../../context/ToggleContext';
+import { UserContext } from '../../context/UserContext';
 
 function RightHandMenuBar() {
+  const { setUser } = useContext(UserContext);
+  const { setActiveNav } = useContext(ToggleContext);
+
+  let navigate = useNavigate();
   const openSettingsContainer = () => {
     console.log('openSettingsContainer');
   };
-  
+
+  // TODO: create reusable function 
+  const logoutUser = (event) => {
+    event.preventDefault();
+    setActiveNav('/');
+    setUser({});
+    localStorage.removeItem(process.env.REACT_APP_USER_TOKEN);
+
+    navigate('/', { replace: true });
+  };
+
   return (
     <section className='grid absolute right-2 top-2 h-full'>
-      <div className='outline outline-1 outline-black h-fit w-fit rounded bg-green-900 p-2'>
+      <div className='grid gap-2 outline outline-1 outline-black h-fit w-fit rounded bg-green-900 p-2'>
         <div
           onClick={openSettingsContainer}
+          className='outline outline-1 outline-black rounded-full text-xl p-1 bg-blue-400 hover:brightness-110 cursor-pointer'
+        >
+          ⚙️
+        </div>
+        <div
+          onClick={logoutUser}
           className='outline outline-1 outline-black rounded-full text-xl p-1 bg-blue-400 hover:brightness-110 cursor-pointer'
         >
           ⚙️
