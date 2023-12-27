@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 // Components
-import { ToggleContext } from '../../context/ToggleContext';
-import { CountriesDataArray } from '../../utils/data/CountriesData';
 import RightHandMenuBar from '../../components/settings/RightHandMenuBar';
 import OwnerBanner from '../../components/overlays/OwnerBanner';
 import PlaneAnimation from '../../components/animations/PlaneAnimation';
@@ -11,20 +10,27 @@ import CountryDisplayContainer from '../../components/overlays/CountryDisplayCon
 import CountryObject from '../../components/countries/CountryObject';
 import SettingsContainer from '../../components/settings/SettingsContainer';
 import StatsDisplayContainer from '../../components/overlays/StatsDisplayContainer';
+// Context
 import { UserContext } from '../../context/UserContext';
-import { useNavigate } from 'react-router-dom';
+import { ToggleContext } from '../../context/ToggleContext';
+// Data
+import { CountriesDataArray } from '../../utils/data/CountriesData';
 
 function MapPage() {
-  const { setActiveNav } = useContext(ToggleContext);
+  const { setActiveNav, settingsMenuIsOpen, statsDisplayIsOpen } =
+    useContext(ToggleContext);
   const { user } = useContext(UserContext);
-console.log('2222222222222222222222222222');
+
+  // Countries
   const [countriesArray, setCountiesArray] = useState(CountriesDataArray);
   const [activeCountry, setActiveCountry] = useState(null);
+
+  // Calculate position
   const calculatePosition = (isSun) => {
     const hour = new Date().getHours();
     let position;
     if (isSun) {
-      position = (hour / 24) * 100; // Sun's position calculation
+      position = (hour * 24) / 100; // Sun's position calculation
     } else {
       position = (((hour + 12) % 24) / 24) * 100; // Moon's position calculation
     }
@@ -35,27 +41,34 @@ console.log('2222222222222222222222222222');
   const [sunPosition, setSunPosition] = useState(calculatePosition(true));
   const [moonPosition, setMoonPosition] = useState(calculatePosition(false));
 
+  // Set user and nav
   useEffect(() => {
     if (!user.id) {
-      console.log('AAAAAAAAAAAAAAAA');
       // Redirect to login if not logged in
-      loginPage()
+      loginPage();
     }
-
     setActiveNav('/');
+  }, []);
+
+  // Update sun and moon positions
+  useEffect(() => {
     const interval = setInterval(() => {
       setSunPosition(calculatePosition(true));
       setMoonPosition(calculatePosition(false));
     }, 60000); // Every minute
+
     return () => clearInterval(interval);
   }, []);
 
+  // Mouse position data
   const [hoveredCountry, setHoveredCountry] = useState(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
+  // Mouse position
   const handleMouseOver = (countryId) => {
     setHoveredCountry(countryId);
     setActiveCountry(countryId);
+
     window.onmousemove = (e) => {
       setTooltipPosition({ x: e.clientX, y: e.clientY });
     };
@@ -64,16 +77,16 @@ console.log('2222222222222222222222222222');
   const handleMouseLeave = () => {
     setHoveredCountry(null);
     setActiveCountry(null);
+
     window.onmousemove = null;
   };
+
+  // Navigate to login if no user found
   let navigate = useNavigate();
 
   const loginPage = () => {
     navigate('/login', { replace: true });
   };
-
-  const [settingsMenuIsOpen, setSettingsMenuIsOpen] = useState(false);
-  const [statsDisplayIsOpen, setStatsDisplayIsOpen] = useState(true);
 
   return (
     <div className='grid font-poppins shadow-[inset_-12px_-8px_40px_#46464690] h-screen max-h-screen overflow-hidden'>
