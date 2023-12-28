@@ -17,7 +17,7 @@ module.exports = {
         'colour-light': '#6DC85A',
         'colour-med': '#32931D',
         'colour-dark': '#1A7408',
-        'transparent-black': 'rgba(0, 0, 0, 0.65)',
+        'transparent-black': 'rgba(0, 0, 0, 0.85)',
         'transparent-white': 'rgba(255, 255, 255, 0.65)',
         'main-text': '#000000',
         'dark-text': '#FFFFFF',

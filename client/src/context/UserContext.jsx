@@ -8,7 +8,10 @@ import { useNavigate } from 'react-router-dom';
 export const UserContext = React.createContext();
 
 const UserContextProvider = ({ children }) => {
-  const [user, setUser] = useState({id: 4});
+  const [user, setUser] = useState({
+    id: 4,
+    hasSetUp: false,
+  });
 
   const [token, setToken] = useState(
     localStorage.getItem(process.env.REACT_APP_USER_TOKEN) || ''
@@ -29,7 +32,7 @@ const UserContextProvider = ({ children }) => {
           setUser(res.data.data.user);
         })
         .then(() => navigateToMapPage())
-        
+
         .catch((err) => {
           console.error('Unable to retrieve user data', err);
         });

@@ -29,10 +29,10 @@ export const CountriesDataArray = [
   },
   {
     countryName: 'Albania',
-    visited: false,
+    visited: true,
     defaultColor: countryColoursArray[0],
-    pinX: 1383,
-    pinY: 261.6,
+    pinX: 228.3,
+    pinY: 1.55,
     countryMonuments: [
       {
         monumentName: 'Butrint',

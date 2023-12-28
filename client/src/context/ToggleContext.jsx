@@ -6,9 +6,15 @@ export const ToggleContext = React.createContext();
 const ToggleContextProvider = ({ children }) => {
   const [toggleNavigation, setToggleNavigation] = useState(false);
   const [activeNav, setActiveNav] = useState('/');
+  // Account Setup
+  const [userHasSetUpAccount, setUserHasSetUpAccount] = useState(false);
+  const [accountSetupIsOpen, setAccountSetupIsOpen] = useState(false);
   // Display booleans
   const [settingsMenuIsOpen, setSettingsMenuIsOpen] = useState(false);
   const [statsDisplayIsOpen, setStatsDisplayIsOpen] = useState(true);
+  const [rightHandMenuBarIsVisible, setRightHandMenuBarIsVisible] =
+    useState(true);
+  const [ownerBannerIsVisible, setOwnerBannerIsVisible] = useState(true);
   const [musicIsMuted, setMusicIsMuted] = useState(false);
 
   const toggleNavbarOpenClosed = () => {
@@ -46,6 +52,14 @@ const ToggleContextProvider = ({ children }) => {
         setMusicIsMuted,
         muteUnmuteMusic,
         toggleStatsDisplay,
+        userHasSetUpAccount,
+        setUserHasSetUpAccount,
+        accountSetupIsOpen,
+        setAccountSetupIsOpen,
+        rightHandMenuBarIsVisible,
+        setRightHandMenuBarIsVisible,
+        ownerBannerIsVisible,
+        setOwnerBannerIsVisible,
       }}
     >
       {children}

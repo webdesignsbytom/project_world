@@ -16,16 +16,57 @@ import { ToggleContext } from '../../context/ToggleContext';
 // Data
 import { CountriesDataArray } from '../../utils/data/CountriesData';
 // Images
-import PinIcon from '../../assets/images/svg/pin.svg'
+import PinIcon from '../../assets/images/svg/pin.svg';
+import AccountSetUpContainer from '../../components/settings/AccountSetUpContainer';
 
 function MapPage() {
-  const { setActiveNav, settingsMenuIsOpen, statsDisplayIsOpen } =
-    useContext(ToggleContext);
+  const {
+    settingsMenuIsOpen,
+    statsDisplayIsOpen,
+    accountSetupIsOpen,
+    setAccountSetupIsOpen,
+    setSettingsMenuIsOpen,
+    setStatsDisplayIsOpen,
+    rightHandMenuBarIsVisible,
+    setRightHandMenuBarIsVisible,
+    ownerBannerIsVisible,
+    setOwnerBannerIsVisible,
+  } = useContext(ToggleContext);
   const { user } = useContext(UserContext);
 
   // Countries
   const [countriesArray, setCountriesArray] = useState(CountriesDataArray);
   const [activeCountry, setActiveCountry] = useState(null);
+
+  // Set user and nav
+  useEffect(() => {
+    if (!user.id) {
+      // Redirect to login if not logged in
+      loginPage();
+    }
+    if (!user.hasSetUp) {
+      // First time auto open account set up page
+      runNewUserSetUp();
+    }
+  }, []);
+
+  const runNewUserSetUp = () => {
+    setAccountSetupIsOpen(true);
+    setSettingsMenuIsOpen(false);
+    setStatsDisplayIsOpen(false);
+    setRightHandMenuBarIsVisible(false);
+    setOwnerBannerIsVisible(false);
+  };
+
+  // Update sun and moon positions
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSunPosition(calculatePosition(true));
+      setMoonPosition(calculatePosition(false));
+    }, 60000); // Every minute
+
+    return () => clearInterval(interval);
+  }, []);
 
   // Calculate position
   const calculatePosition = (isSun) => {
@@ -42,45 +83,6 @@ function MapPage() {
   // Sun and moon
   const [sunPosition, setSunPosition] = useState(calculatePosition(true));
   const [moonPosition, setMoonPosition] = useState(calculatePosition(false));
-
-  // Set user and nav
-  useEffect(() => {
-    if (!user.id) {
-      // Redirect to login if not logged in
-      loginPage();
-    }
-    setActiveNav('/');
-
-    let newCountriesArray = [...countriesArray];
-    let indices = [];
-    while (indices.length < 10) {
-      let randomIndex = Math.floor(Math.random() * newCountriesArray.length);
-      if (!indices.includes(randomIndex)) {
-        indices.push(randomIndex);
-        newCountriesArray[randomIndex] = {
-          ...newCountriesArray[randomIndex],
-          visited: true,
-        };
-      }
-    }
-    setCountriesArray(newCountriesArray);
-
-    const visitedCountries = newCountriesArray
-      .filter(country => country.visited)
-      .map(country => country.countryName);
-    console.log("Visited Countries:", visitedCountries);
-  }, []);
-
-  // Update sun and moon positions
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSunPosition(calculatePosition(true));
-      setMoonPosition(calculatePosition(false));
-    }, 60000); // Every minute
-
-    return () => clearInterval(interval);
-  }, []);
-
 
   // Mouse position data
   const [hoveredCountry, setHoveredCountry] = useState(null);
@@ -110,25 +112,21 @@ function MapPage() {
     navigate('/login', { replace: true });
   };
 
-  const skipToNextImage = () => {
-    console.log('skipping next image');
-  }
-
   return (
     <div className='grid font-poppins shadow-[inset_-12px_-8px_40px_#46464690] h-screen max-h-screen overflow-hidden'>
       {/* Main */}
       <main className='relative grid h-full p-1 shadow-[inset_-12px_-8px_40px_#46464690] overflow-hidden animate-ocean-animation'>
+        {/* First time account set up */}
+        {accountSetupIsOpen && <AccountSetUpContainer />}
         {/* Settings container */}
         {settingsMenuIsOpen && <SettingsContainer />}
-
         {/* Stats container */}
         {statsDisplayIsOpen && <StatsDisplayContainer />}
 
         {/* Owner banner */}
-        <OwnerBanner />
-
+        {ownerBannerIsVisible && <OwnerBanner />}
         {/* Right hand settings and other menu */}
-        <RightHandMenuBar />
+        {rightHandMenuBarIsVisible && <RightHandMenuBar />}
 
         {/* Animations */}
         {/* Animated Plane */}
