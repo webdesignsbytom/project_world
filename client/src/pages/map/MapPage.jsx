@@ -15,6 +15,8 @@ import { UserContext } from '../../context/UserContext';
 import { ToggleContext } from '../../context/ToggleContext';
 // Data
 import { CountriesDataArray } from '../../utils/data/CountriesData';
+// Images
+import PinIcon from '../../assets/images/svg/pin.svg'
 
 function MapPage() {
   const { setActiveNav, settingsMenuIsOpen, statsDisplayIsOpen } =
@@ -22,7 +24,7 @@ function MapPage() {
   const { user } = useContext(UserContext);
 
   // Countries
-  const [countriesArray, setCountiesArray] = useState(CountriesDataArray);
+  const [countriesArray, setCountriesArray] = useState(CountriesDataArray);
   const [activeCountry, setActiveCountry] = useState(null);
 
   // Calculate position
@@ -48,6 +50,25 @@ function MapPage() {
       loginPage();
     }
     setActiveNav('/');
+
+    let newCountriesArray = [...countriesArray];
+    let indices = [];
+    while (indices.length < 10) {
+      let randomIndex = Math.floor(Math.random() * newCountriesArray.length);
+      if (!indices.includes(randomIndex)) {
+        indices.push(randomIndex);
+        newCountriesArray[randomIndex] = {
+          ...newCountriesArray[randomIndex],
+          visited: true,
+        };
+      }
+    }
+    setCountriesArray(newCountriesArray);
+
+    const visitedCountries = newCountriesArray
+      .filter(country => country.visited)
+      .map(country => country.countryName);
+    console.log("Visited Countries:", visitedCountries);
   }, []);
 
   // Update sun and moon positions
@@ -59,6 +80,7 @@ function MapPage() {
 
     return () => clearInterval(interval);
   }, []);
+
 
   // Mouse position data
   const [hoveredCountry, setHoveredCountry] = useState(null);
@@ -140,7 +162,7 @@ function MapPage() {
                 activeCountry={activeCountry}
                 handleMouseOver={handleMouseOver}
                 handleMouseLeave={handleMouseLeave}
-                onclick={skipToNextImage}
+                visited={country.visited}
               />
             ))
           )}

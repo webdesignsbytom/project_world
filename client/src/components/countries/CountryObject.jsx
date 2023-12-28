@@ -1,4 +1,6 @@
 import React from 'react';
+// Images
+import PinIcon from '../../assets/images/svg/pin.svg'
 
 function CountryObject({
   country,
@@ -8,7 +10,9 @@ function CountryObject({
   activeCountry,
   handleMouseOver,
   handleMouseLeave,
+  visited
 }) {
+  console.log('vistied', visited);
   return (
     <path
       key={`${country.id}-${territoryIndex}`}
@@ -24,7 +28,7 @@ function CountryObject({
       }
       onMouseOver={() => handleMouseOver(territory.id)}
       onMouseLeave={handleMouseLeave}
-    />
+      />
   );
 }
 

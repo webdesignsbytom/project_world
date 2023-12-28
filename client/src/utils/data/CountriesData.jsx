@@ -9,6 +9,7 @@ function getRandomColour() {
 export const CountriesDataArray = [
   {
     countryName: 'Afghanistan',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [
       {
@@ -26,6 +27,7 @@ export const CountriesDataArray = [
   },
   {
     countryName: 'Albania',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [
       {
@@ -44,6 +46,7 @@ export const CountriesDataArray = [
   // Algeria
   {
     countryName: 'Algeria',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -57,6 +60,7 @@ export const CountriesDataArray = [
   // American Samoa
   {
     countryName: 'American Samoa',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -75,6 +79,7 @@ export const CountriesDataArray = [
   // Angola
   {
     countryName: 'Angola',
+    visited: false,
     defaultColor: countryColoursArray[6],
     countryMonuments: [
       {
@@ -98,6 +103,7 @@ export const CountriesDataArray = [
   // Anguilla
   {
     countryName: 'Anguilla',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -111,6 +117,7 @@ export const CountriesDataArray = [
   // Antigua and Barbuda
   {
     countryName: 'Antigua and Barbuda',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -129,6 +136,7 @@ export const CountriesDataArray = [
   // Argentina
   {
     countryName: 'Argentina',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       {
@@ -152,6 +160,7 @@ export const CountriesDataArray = [
   // Armenia
   {
     countryName: 'Armenia',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       {
@@ -170,6 +179,7 @@ export const CountriesDataArray = [
   // Aruba
   {
     countryName: 'Aruba',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -183,6 +193,7 @@ export const CountriesDataArray = [
   // Australia
   {
     countryName: 'Australia',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [
       {
@@ -205,6 +216,7 @@ export const CountriesDataArray = [
   },
   {
     countryName: 'Austria',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [
       { monumentName: 'Schönbrunn Palace', monumentPosition: '' },
@@ -220,6 +232,7 @@ export const CountriesDataArray = [
   // Azerbaijan
   {
     countryName: 'Azerbaijan',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [
       { monumentName: 'Gobustan Rock Art', monumentPosition: '' },
@@ -240,6 +253,7 @@ export const CountriesDataArray = [
   // Bahamas
   {
     countryName: 'Bahamas',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -338,6 +352,7 @@ export const CountriesDataArray = [
   // Bahrain
   {
     countryName: 'Bahrain',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -351,6 +366,7 @@ export const CountriesDataArray = [
 
   {
     countryName: 'Bangladesh',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: 'Sundarbans', monumentPosition: '' }],
     countryBorderPaths: [
@@ -364,6 +380,7 @@ export const CountriesDataArray = [
   // Barbados
   {
     countryName: 'Barbados',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -377,6 +394,7 @@ export const CountriesDataArray = [
   //
   {
     countryName: 'Belarus',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -390,6 +408,7 @@ export const CountriesDataArray = [
   // Belgium
   {
     countryName: 'Belgium',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: 'Grand Place', monumentPosition: '' }],
     countryBorderPaths: [
@@ -403,6 +422,7 @@ export const CountriesDataArray = [
   // Belize
   {
     countryName: 'Belize',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -416,6 +436,7 @@ export const CountriesDataArray = [
   // Benin
   {
     countryName: 'Benin',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -429,6 +450,7 @@ export const CountriesDataArray = [
   // Bermuda
   {
     countryName: 'Bermuda',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -442,6 +464,7 @@ export const CountriesDataArray = [
   // Bhutan
   {
     countryName: 'Bhutan',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -455,6 +478,7 @@ export const CountriesDataArray = [
   // Bolivia
   {
     countryName: 'Bolivia',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -468,6 +492,7 @@ export const CountriesDataArray = [
   // Bosnia and Herzegovina
   {
     countryName: 'Bosnia and Herzegovina',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -481,6 +506,7 @@ export const CountriesDataArray = [
   // Botswana
   {
     countryName: 'Botswana',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -494,6 +520,7 @@ export const CountriesDataArray = [
   // Brazil
   {
     countryName: 'Brazil',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       { monumentName: 'Christ the Redeemer', monumentPosition: '' },
@@ -509,6 +536,7 @@ export const CountriesDataArray = [
   // British Virgin Islands
   {
     countryName: 'British Virgin Islands',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -522,6 +550,7 @@ export const CountriesDataArray = [
   // Brunei Darussalam
   {
     countryName: 'Brunei Darussalam',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -535,6 +564,7 @@ export const CountriesDataArray = [
   // Bulgaria
   {
     countryName: 'Bulgaria',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [
       { monumentName: 'Rila Monastery', monumentPosition: '' },
@@ -550,6 +580,7 @@ export const CountriesDataArray = [
   // Burkina Faso
   {
     countryName: 'Burkina Faso',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [
       { monumentName: 'Ruins of Loropéni', monumentPosition: '' },
@@ -565,6 +596,7 @@ export const CountriesDataArray = [
   // Burundi
   {
     countryName: 'Burundi',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       { monumentName: 'Kibira National Park', monumentPosition: '' },
@@ -580,6 +612,7 @@ export const CountriesDataArray = [
   // Cambodia
   {
     countryName: 'Cambodia',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: 'Angkor Wat', monumentPosition: '' }],
     countryBorderPaths: [
@@ -593,6 +626,7 @@ export const CountriesDataArray = [
   // Cameroon
   {
     countryName: 'Cameroon',
+    visited: false,
     defaultColor: countryColoursArray[6],
     countryMonuments: [
       { monumentName: 'Dja Faunal Reserve', monumentPosition: '' },
@@ -608,6 +642,7 @@ export const CountriesDataArray = [
   // Canada
   {
     countryName: 'Canada',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: 'CN Tower', monumentPosition: '' }],
     countryBorderPaths: [
@@ -766,6 +801,7 @@ export const CountriesDataArray = [
   // Canary Islands
   {
     countryName: 'Canary Islands',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -809,6 +845,7 @@ export const CountriesDataArray = [
   // Cape Verde
   {
     countryName: 'Cape Verde',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: 'Cidade Velha', monumentPosition: '' }],
     countryBorderPaths: [
@@ -862,6 +899,7 @@ export const CountriesDataArray = [
   // Cayman Islands
   {
     countryName: 'Cayman Islands',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -885,6 +923,7 @@ export const CountriesDataArray = [
   // Central African Republic
   {
     countryName: 'Central African Republic',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       {
@@ -903,6 +942,7 @@ export const CountriesDataArray = [
   // Chad
   {
     countryName: 'Chad',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       { monumentName: 'Zakouma National Park', monumentPosition: '' },
@@ -918,6 +958,7 @@ export const CountriesDataArray = [
   // Chile
   {
     countryName: 'Chile',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: 'Easter Island', monumentPosition: '' }],
     countryBorderPaths: [
@@ -936,6 +977,7 @@ export const CountriesDataArray = [
   // China
   {
     countryName: 'China',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [
       { monumentName: 'Great Wall of China', monumentPosition: '' },
@@ -956,6 +998,7 @@ export const CountriesDataArray = [
   // Colombia
   {
     countryName: 'Colombia',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: 'Lost City', monumentPosition: '' }],
     countryBorderPaths: [
@@ -969,6 +1012,7 @@ export const CountriesDataArray = [
   // Comoros
   {
     countryName: 'Comoros',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       { monumentName: 'Mount Karthala', monumentPosition: '' },
@@ -994,6 +1038,7 @@ export const CountriesDataArray = [
   // Congo, Republic of
   {
     countryName: 'Congo, Republic of',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       { monumentName: 'Odzala National Park', monumentPosition: '' },
@@ -1009,6 +1054,7 @@ export const CountriesDataArray = [
   // Costa Rica
   {
     countryName: 'Costa Rica',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       {
@@ -1027,6 +1073,7 @@ export const CountriesDataArray = [
   // Côte d'Ivoire
   {
     countryName: 'Côte d Ivoire',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1040,6 +1087,7 @@ export const CountriesDataArray = [
   // Croatia
   {
     countryName: 'Croatia',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [
       { monumentName: 'Plitvice Lakes National Park', monumentPosition: '' },
@@ -1055,6 +1103,7 @@ export const CountriesDataArray = [
   // Cuba
   {
     countryName: 'Cuba',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: 'Old Havana', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1068,6 +1117,7 @@ export const CountriesDataArray = [
   // Curaçao
   {
     countryName: 'Curaçao',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1081,6 +1131,7 @@ export const CountriesDataArray = [
   // Cyprus
   {
     countryName: 'Cyprus',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       { monumentName: 'Paphos Archaeological Park', monumentPosition: '' },
@@ -1101,6 +1152,7 @@ export const CountriesDataArray = [
   // Czech Republic
   {
     countryName: 'Czech Republic',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: 'Prague Castle', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1114,6 +1166,7 @@ export const CountriesDataArray = [
   // Democratic Republic of the Congo
   {
     countryName: 'Democratic Republic of the Congo',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1127,6 +1180,7 @@ export const CountriesDataArray = [
   // Denmark
   {
     countryName: 'Denmark',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [
       { monumentName: 'Tivoli Gardens', monumentPosition: '' },
@@ -1147,6 +1201,7 @@ export const CountriesDataArray = [
   // Djibouti
   {
     countryName: 'Djibouti',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: 'Lake Assal', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1160,6 +1215,7 @@ export const CountriesDataArray = [
   // Dominican Republic
   {
     countryName: 'Dominica',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       {
@@ -1178,6 +1234,7 @@ export const CountriesDataArray = [
   // Dominican Republic
   {
     countryName: 'Dominican Republic',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       { monumentName: 'Colonial City of Santo Domingo', monumentPosition: '' },
@@ -1193,6 +1250,7 @@ export const CountriesDataArray = [
   // Ecuador
   {
     countryName: 'Ecuador',
+    visited: false,
     defaultColor: countryColoursArray[6],
     countryMonuments: [
       { monumentName: 'Galápagos Islands', monumentPosition: '' },
@@ -1208,6 +1266,7 @@ export const CountriesDataArray = [
   // Egypt
   {
     countryName: 'Egypt',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [
       { monumentName: 'Pyramids of Giza', monumentPosition: '' },
@@ -1223,6 +1282,7 @@ export const CountriesDataArray = [
   // El Salvador
   {
     countryName: 'El Salvador',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: 'Joya de Cerén', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1236,6 +1296,7 @@ export const CountriesDataArray = [
   // Equatorial Guinea
   {
     countryName: 'Equatorial Guinea',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [
       { monumentName: 'Malabo Cathedral', monumentPosition: '' },
@@ -1251,6 +1312,7 @@ export const CountriesDataArray = [
   // Eritrea
   {
     countryName: 'Eritrea',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [{ monumentName: 'Asmara', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1264,6 +1326,7 @@ export const CountriesDataArray = [
   // Estonia
   {
     countryName: 'Estonia',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       { monumentName: 'Tallinn Old Town', monumentPosition: '' },
@@ -1279,6 +1342,7 @@ export const CountriesDataArray = [
   // Eswatini
   {
     countryName: 'Eswatini',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       { monumentName: 'Mlilwane Wildlife Sanctuary', monumentPosition: '' },
@@ -1290,6 +1354,7 @@ export const CountriesDataArray = [
   // Ethiopia
   {
     countryName: 'Ethiopia',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [
       { monumentName: 'Rock-Hewn Churches of Lalibela', monumentPosition: '' },
@@ -1305,6 +1370,7 @@ export const CountriesDataArray = [
   // Falkland Islands
   {
     countryName: 'Falkland Islands',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1368,6 +1434,7 @@ export const CountriesDataArray = [
   // Faeroe Islands
   {
     countryName: 'Faeroe Islands',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1411,6 +1478,7 @@ export const CountriesDataArray = [
   // Federated States of Micronesia
   {
     countryName: 'Federated States of Micronesia',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1434,6 +1502,7 @@ export const CountriesDataArray = [
   // Fiji
   {
     countryName: 'Fiji',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       { monumentName: 'Sigatoka Sand Dunes', monumentPosition: '' },
@@ -1494,6 +1563,7 @@ export const CountriesDataArray = [
   // Finland
   {
     countryName: 'Finland',
+    visited: false,
     defaultColor: countryColoursArray[6],
     countryMonuments: [{ monumentName: 'Suomenlinna', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1507,6 +1577,7 @@ export const CountriesDataArray = [
   // France
   {
     countryName: 'France',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [{ monumentName: 'Eiffel Tower', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1525,6 +1596,7 @@ export const CountriesDataArray = [
   // French Guiana
   {
     countryName: 'French Guiana',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1538,6 +1610,7 @@ export const CountriesDataArray = [
   // French Polynesia
   {
     countryName: 'French Polynesia',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1621,6 +1694,7 @@ export const CountriesDataArray = [
   // Gabon
   {
     countryName: 'Gabon',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       { monumentName: 'Loango National Park', monumentPosition: '' },
@@ -1636,6 +1710,7 @@ export const CountriesDataArray = [
   // Gambia
   {
     countryName: 'Gambia',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       { monumentName: 'Kunta Kinteh Island', monumentPosition: '' },
@@ -1651,6 +1726,7 @@ export const CountriesDataArray = [
   // Georgia
   {
     countryName: 'Georgia',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       { monumentName: 'Gelati Monastery', monumentPosition: '' },
@@ -1666,6 +1742,7 @@ export const CountriesDataArray = [
   // Germany
   {
     countryName: 'Germany',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [
       { monumentName: 'Brandenburg Gate', monumentPosition: '' },
@@ -1681,6 +1758,7 @@ export const CountriesDataArray = [
   // Ghana
   {
     countryName: 'Ghana',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [
       { monumentName: 'Cape Coast Castle', monumentPosition: '' },
@@ -1696,6 +1774,7 @@ export const CountriesDataArray = [
   // Greece
   {
     countryName: 'Greece',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [
       { monumentName: 'Acropolis of Athens', monumentPosition: '' },
@@ -1716,6 +1795,7 @@ export const CountriesDataArray = [
   // Greenland
   {
     countryName: 'Greenland',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1729,6 +1809,7 @@ export const CountriesDataArray = [
   // Grenada
   {
     countryName: 'Grenada',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [{ monumentName: 'Fort George', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1742,6 +1823,7 @@ export const CountriesDataArray = [
   // Guadeloupe
   {
     countryName: 'Guadeloupe',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1765,6 +1847,7 @@ export const CountriesDataArray = [
   // Guam
   {
     countryName: 'Guam',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1778,6 +1861,7 @@ export const CountriesDataArray = [
   // Guatemala
   {
     countryName: 'Guatemala',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: 'Tikal', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1791,6 +1875,7 @@ export const CountriesDataArray = [
   // Guinea
   {
     countryName: 'Guinea',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       { monumentName: 'Fouta Djallon Highlands', monumentPosition: '' },
@@ -1806,6 +1891,7 @@ export const CountriesDataArray = [
   // Guinea-Bissau
   {
     countryName: 'Guinea-Bissau',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       { monumentName: 'Bijagós Archipelago', monumentPosition: '' },
@@ -1821,6 +1907,7 @@ export const CountriesDataArray = [
   // Guyana
   {
     countryName: 'Guyana',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       { monumentName: 'Kaieteur Falls', monumentPosition: '' },
@@ -1836,6 +1923,7 @@ export const CountriesDataArray = [
   // Haiti
   {
     countryName: 'Haiti',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [
       { monumentName: 'Citadelle Laferrière', monumentPosition: '' },
@@ -1851,6 +1939,7 @@ export const CountriesDataArray = [
   // Honduras
   {
     countryName: 'Honduras',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: 'Copán', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1864,6 +1953,7 @@ export const CountriesDataArray = [
   // Hungary
   {
     countryName: 'Hungary',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: 'Buda Castle', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1877,6 +1967,7 @@ export const CountriesDataArray = [
   // Iceland
   {
     countryName: 'Iceland',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       { monumentName: 'Þingvellir National Park', monumentPosition: '' },
@@ -1892,6 +1983,7 @@ export const CountriesDataArray = [
   // India
   {
     countryName: 'India',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [{ monumentName: 'Taj Mahal', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1905,6 +1997,7 @@ export const CountriesDataArray = [
   // Indonesia
   {
     countryName: 'Indonesia',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       { monumentName: 'Borobudur Temple', monumentPosition: '' },
@@ -1980,6 +2073,7 @@ export const CountriesDataArray = [
   // Iran
   {
     countryName: 'Iran',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: 'Persepolis', monumentPosition: '' }],
     countryBorderPaths: [
@@ -1993,6 +2087,7 @@ export const CountriesDataArray = [
   // Iraq
   {
     countryName: 'Iraq',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: 'Hatra', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2006,6 +2101,7 @@ export const CountriesDataArray = [
   // Ireland
   {
     countryName: 'Ireland',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [
       { monumentName: 'Cliffs of Moher', monumentPosition: '' },
@@ -2021,6 +2117,7 @@ export const CountriesDataArray = [
   // Israel
   {
     countryName: 'Israel',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [{ monumentName: 'Western Wall', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2034,6 +2131,7 @@ export const CountriesDataArray = [
   // Italy
   {
     countryName: 'Italy',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [{ monumentName: 'Colosseum', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2057,6 +2155,7 @@ export const CountriesDataArray = [
   // Jamaica
   {
     countryName: 'Jamaica',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       { monumentName: 'Blue and John Crow Mountains', monumentPosition: '' },
@@ -2072,6 +2171,7 @@ export const CountriesDataArray = [
   // Japan
   {
     countryName: 'Japan',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: 'Mount Fuji', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2095,6 +2195,7 @@ export const CountriesDataArray = [
   // Jordan
   {
     countryName: 'Jordan',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: 'Petra', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2108,6 +2209,7 @@ export const CountriesDataArray = [
   // Kazakhstan
   {
     countryName: 'Kazakhstan',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [
       { monumentName: 'Mausoleum of Khoja Ahmed Yasawi', monumentPosition: '' },
@@ -2123,6 +2225,7 @@ export const CountriesDataArray = [
   // Kenya
   {
     countryName: 'Kenya',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [{ monumentName: 'Maasai Mara', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2136,6 +2239,7 @@ export const CountriesDataArray = [
   // Kosovo
   {
     countryName: 'Kosovo',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2149,6 +2253,7 @@ export const CountriesDataArray = [
   // Kuwait
   {
     countryName: 'Kuwait',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: 'Kuwait Towers', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2162,6 +2267,7 @@ export const CountriesDataArray = [
   // Kyrgyzstan
   {
     countryName: 'Kyrgyzstan',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [
       { monumentName: 'Tien Shan Mountains', monumentPosition: '' },
@@ -2177,6 +2283,7 @@ export const CountriesDataArray = [
   // Laos
   {
     countryName: 'Laos',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: 'Wat Phou', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2190,6 +2297,7 @@ export const CountriesDataArray = [
   // Latvia
   {
     countryName: 'Latvia',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [
       { monumentName: 'Historic Centre of Riga', monumentPosition: '' },
@@ -2205,6 +2313,7 @@ export const CountriesDataArray = [
   // Lebanon
   {
     countryName: 'Lebanon',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [{ monumentName: 'Baalbek', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2218,6 +2327,7 @@ export const CountriesDataArray = [
   // Lesotho
   {
     countryName: 'Lesotho',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [{ monumentName: 'Thaba-Bosiu', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2231,6 +2341,7 @@ export const CountriesDataArray = [
   // Liberia
   {
     countryName: 'Liberia',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       { monumentName: 'Providence Island', monumentPosition: '' },
@@ -2246,6 +2357,7 @@ export const CountriesDataArray = [
   // Libya
   {
     countryName: 'Libya',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: 'Leptis Magna', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2259,6 +2371,7 @@ export const CountriesDataArray = [
   // Liechtenstein
   {
     countryName: 'Liechtenstein',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: 'Vaduz Castle', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2268,6 +2381,7 @@ export const CountriesDataArray = [
   // Lithuania
   {
     countryName: 'Lithuania',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: 'Trakai Castle', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2281,6 +2395,7 @@ export const CountriesDataArray = [
   // Luxembourg
   {
     countryName: 'Luxembourg',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       { monumentName: 'Bock Casemates', monumentPosition: '' },
@@ -2296,6 +2411,7 @@ export const CountriesDataArray = [
   // Macedonia
   {
     countryName: 'Macedonia',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [{ monumentName: 'Ohrid Region', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2309,6 +2425,7 @@ export const CountriesDataArray = [
   // Madagascar
   {
     countryName: 'Madagascar',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       { monumentName: 'Tsingy de Bemaraha', monumentPosition: '' },
@@ -2324,6 +2441,7 @@ export const CountriesDataArray = [
   // Malawi
   {
     countryName: 'Malawi',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [
       { monumentName: 'Lake Malawi National Park', monumentPosition: '' },
@@ -2339,6 +2457,7 @@ export const CountriesDataArray = [
   // Malaysia
   {
     countryName: 'Malaysia',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [
       { monumentName: 'Petronas Towers', monumentPosition: '' },
@@ -2359,6 +2478,7 @@ export const CountriesDataArray = [
   // Maldives
   {
     countryName: 'Maldives',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [
       { monumentName: 'Muliaage Palace', monumentPosition: '' },
@@ -2374,6 +2494,7 @@ export const CountriesDataArray = [
   // Mali
   {
     countryName: 'Mali',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [{ monumentName: 'Timbuktu', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2387,6 +2508,7 @@ export const CountriesDataArray = [
   // Malta
   {
     countryName: 'Malta',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       { monumentName: 'Hypogeum of Ħal-Saflieni', monumentPosition: '' },
@@ -2407,6 +2529,7 @@ export const CountriesDataArray = [
   // Marshall Islands
   {
     countryName: 'Marshall Islands',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: 'Bikini Atoll', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2420,6 +2543,7 @@ export const CountriesDataArray = [
   // Martinique
   {
     countryName: 'Martinique',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2433,6 +2557,7 @@ export const CountriesDataArray = [
   // Mauritania
   {
     countryName: 'Mauritania',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [
       { monumentName: 'Banc d`Arguin National Park', monumentPosition: '' },
@@ -2448,6 +2573,7 @@ export const CountriesDataArray = [
   // Mauritius
   {
     countryName: 'Mauritius',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [
       { monumentName: 'Le Morne Cultural Landscape', monumentPosition: '' },
@@ -2468,6 +2594,7 @@ export const CountriesDataArray = [
   // Mayotte
   {
     countryName: 'Mayotte',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2481,6 +2608,7 @@ export const CountriesDataArray = [
   // Mexico
   {
     countryName: 'Mexico',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [{ monumentName: 'Chichen Itza', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2494,6 +2622,7 @@ export const CountriesDataArray = [
   // Moldova
   {
     countryName: 'Moldova',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: 'Orheiul Vechi', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2507,6 +2636,7 @@ export const CountriesDataArray = [
   // Monaco
   {
     countryName: 'Monaco',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [
       { monumentName: "Prince's Palace of Monaco", monumentPosition: '' },
@@ -2516,6 +2646,7 @@ export const CountriesDataArray = [
   // Mongolia
   {
     countryName: 'Mongolia',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [{ monumentName: 'Orkhon Valley', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2529,6 +2660,7 @@ export const CountriesDataArray = [
   // Montenegro
   {
     countryName: 'Montenegro',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: 'Bay of Kotor', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2542,6 +2674,7 @@ export const CountriesDataArray = [
   // Montserrat
   {
     countryName: 'Montserrat',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2555,6 +2688,7 @@ export const CountriesDataArray = [
   // Morocco
   {
     countryName: 'Morocco',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [{ monumentName: 'Jemaa el-Fnaa', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2568,6 +2702,7 @@ export const CountriesDataArray = [
   // Mozambique
   {
     countryName: 'Mozambique',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       { monumentName: 'Island of Mozambique', monumentPosition: '' },
@@ -2583,6 +2718,7 @@ export const CountriesDataArray = [
   // Myanmar
   {
     countryName: 'Myanmar',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: 'Bagan', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2596,6 +2732,7 @@ export const CountriesDataArray = [
   // Namibia
   {
     countryName: 'Namibia',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [
       { monumentName: 'Etosha National Park', monumentPosition: '' },
@@ -2611,6 +2748,7 @@ export const CountriesDataArray = [
   // Nauru
   {
     countryName: 'Nauru',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: 'Command Ridge', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2624,6 +2762,7 @@ export const CountriesDataArray = [
   // Nepal
   {
     countryName: 'Nepal',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       { monumentName: 'Kathmandu Valley', monumentPosition: '' },
@@ -2639,6 +2778,7 @@ export const CountriesDataArray = [
   // Netherlands
   {
     countryName: 'Netherlands',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [{ monumentName: 'Rijksmuseum', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2657,6 +2797,7 @@ export const CountriesDataArray = [
   // St. Eustatius (Netherlands)
   {
     countryName: 'St. Eustatius (Netherlands)',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2670,6 +2811,7 @@ export const CountriesDataArray = [
   // Saba (Netherlands)
   {
     countryName: 'Saba (Netherlands)',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2683,6 +2825,7 @@ export const CountriesDataArray = [
   // New Caledonia
   {
     countryName: 'New Caledonia',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2731,6 +2874,7 @@ export const CountriesDataArray = [
   // New Zealand
   {
     countryName: 'New Zealand',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [{ monumentName: 'Milford Sound', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2749,6 +2893,7 @@ export const CountriesDataArray = [
   // Nicaragua
   {
     countryName: 'Nicaragua',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       { monumentName: 'Ruins of León Viejo', monumentPosition: '' },
@@ -2764,6 +2909,7 @@ export const CountriesDataArray = [
   // Niger
   {
     countryName: 'Niger',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [
       { monumentName: 'Air and Ténéré Natural Reserves', monumentPosition: '' },
@@ -2779,6 +2925,7 @@ export const CountriesDataArray = [
   // Nigeria
   {
     countryName: 'Nigeria',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       { monumentName: 'Sukur Cultural Landscape', monumentPosition: '' },
@@ -2794,6 +2941,7 @@ export const CountriesDataArray = [
   // North Korea
   {
     countryName: 'North Korea',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: 'Kaesong', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2807,6 +2955,7 @@ export const CountriesDataArray = [
   // Northern Mariana Islands
   {
     countryName: 'Northern Mariana Islands',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2845,6 +2994,7 @@ export const CountriesDataArray = [
   // Norway
   {
     countryName: 'Norway',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [{ monumentName: 'Bryggen', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2873,6 +3023,7 @@ export const CountriesDataArray = [
   // Oman
   {
     countryName: 'Oman',
+    visited: false,
     defaultColor: countryColoursArray[6],
     countryMonuments: [{ monumentName: 'Bahla Fort', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2891,6 +3042,7 @@ export const CountriesDataArray = [
   // Pakistan
   {
     countryName: 'Pakistan',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: 'Mohenjo-daro', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2904,6 +3056,7 @@ export const CountriesDataArray = [
   // Palau
   {
     countryName: 'Palau',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       { monumentName: 'Rock Islands Southern Lagoon', monumentPosition: '' },
@@ -2919,6 +3072,7 @@ export const CountriesDataArray = [
   // Palestine
   {
     countryName: 'Palestine',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [
       { monumentName: 'Church of the Nativity', monumentPosition: '' },
@@ -2934,6 +3088,7 @@ export const CountriesDataArray = [
   // Panama
   {
     countryName: 'Panama',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: 'Panama Canal', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2947,6 +3102,7 @@ export const CountriesDataArray = [
   // Papua New Guinea
   {
     countryName: 'Papua New Guinea',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: 'Kokoda Track', monumentPosition: '' }],
     countryBorderPaths: [
@@ -2975,6 +3131,7 @@ export const CountriesDataArray = [
   // Paraguay
   {
     countryName: 'Paraguay',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       {
@@ -2993,6 +3150,7 @@ export const CountriesDataArray = [
   // Peru
   {
     countryName: 'Peru',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: 'Machu Picchu', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3006,6 +3164,7 @@ export const CountriesDataArray = [
   // Philippines
   {
     countryName: 'Philippines',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       { monumentName: 'Banaue Rice Terraces', monumentPosition: '' },
@@ -3051,6 +3210,7 @@ export const CountriesDataArray = [
   // Poland
   {
     countryName: 'Poland',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [
       { monumentName: 'Wieliczka Salt Mine', monumentPosition: '' },
@@ -3066,6 +3226,7 @@ export const CountriesDataArray = [
   // Puerto Rico
   {
     countryName: 'Puerto Rico',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3089,6 +3250,7 @@ export const CountriesDataArray = [
   // Portugal
   {
     countryName: 'Portugal',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [
       { monumentName: 'Tower of Belém', monumentPosition: '' },
@@ -3104,6 +3266,7 @@ export const CountriesDataArray = [
   // Qatar
   {
     countryName: 'Qatar',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [{ monumentName: 'Al Zubarah', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3117,6 +3280,7 @@ export const CountriesDataArray = [
   // Reunion
   {
     countryName: 'Reunion',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3130,6 +3294,7 @@ export const CountriesDataArray = [
   // Romania
   {
     countryName: 'Romania',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: 'Peles Castle', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3143,6 +3308,7 @@ export const CountriesDataArray = [
   // Russia
   {
     countryName: 'Russia',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: 'Red Square', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3201,6 +3367,7 @@ export const CountriesDataArray = [
   // Rwanda
   {
     countryName: 'Rwanda',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [
       { monumentName: 'Volcanoes National Park', monumentPosition: '' },
@@ -3216,6 +3383,7 @@ export const CountriesDataArray = [
   // Saint-Barthélemy
   {
     countryName: 'Saint-Barthélemy',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3229,6 +3397,7 @@ export const CountriesDataArray = [
   // Saint Kitts and Nevis
   {
     countryName: 'Saint Kitts and Nevis',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       { monumentName: 'Brimstone Hill Fortress', monumentPosition: '' },
@@ -3249,6 +3418,7 @@ export const CountriesDataArray = [
   // Saint Lucia
   {
     countryName: 'Saint Lucia',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [{ monumentName: 'Pitons', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3262,6 +3432,7 @@ export const CountriesDataArray = [
   // Saint-Martin
   {
     countryName: 'Saint-Martin',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3275,6 +3446,7 @@ export const CountriesDataArray = [
   // Saint Vincent and the Grenadines
   {
     countryName: 'Saint Vincent and the Grenadines',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [
       { monumentName: 'La Soufrière Volcano', monumentPosition: '' },
@@ -3290,6 +3462,7 @@ export const CountriesDataArray = [
   // Samoa
   {
     countryName: 'Samoa',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [
       { monumentName: 'Papaseea Sliding Rocks', monumentPosition: '' },
@@ -3310,6 +3483,7 @@ export const CountriesDataArray = [
   // San Marino
   {
     countryName: 'San Marino',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: 'Guaita Tower', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3319,6 +3493,7 @@ export const CountriesDataArray = [
   // Sao Tome and Principe
   {
     countryName: 'Sao Tome and Principe',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       { monumentName: 'Obo National Park', monumentPosition: '' },
@@ -3339,6 +3514,7 @@ export const CountriesDataArray = [
   // Saudi Arabia
   {
     countryName: 'Saudi Arabia',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       {
@@ -3357,6 +3533,7 @@ export const CountriesDataArray = [
   // Senegal
   {
     countryName: 'Senegal',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       { monumentName: 'Island of Gorée', monumentPosition: '' },
@@ -3372,6 +3549,7 @@ export const CountriesDataArray = [
   // Serbia
   {
     countryName: 'Serbia',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [
       { monumentName: 'Studenica Monastery', monumentPosition: '' },
@@ -3387,6 +3565,7 @@ export const CountriesDataArray = [
   // Seychelles
   {
     countryName: 'Seychelles',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [
       { monumentName: 'Vallée de Mai Nature Reserve', monumentPosition: '' },
@@ -3412,6 +3591,7 @@ export const CountriesDataArray = [
   // Sierra Leone
   {
     countryName: 'Sierra Leone',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: 'Bunce Island', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3425,6 +3605,7 @@ export const CountriesDataArray = [
   // Singapore
   {
     countryName: 'Singapore',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       { monumentName: 'Marina Bay Sands', monumentPosition: '' },
@@ -3436,6 +3617,7 @@ export const CountriesDataArray = [
   // Sint Maarten
   {
     countryName: 'Sint Maarten',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3449,6 +3631,7 @@ export const CountriesDataArray = [
   // Slovakia
   {
     countryName: 'Slovakia',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: 'Spiš Castle', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3462,6 +3645,7 @@ export const CountriesDataArray = [
   // Slovenia
   {
     countryName: 'Slovenia',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: 'Lake Bled', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3475,6 +3659,7 @@ export const CountriesDataArray = [
   // Solomon Islands
   {
     countryName: 'Solomon Islands',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: 'East Rennell', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3648,6 +3833,7 @@ export const CountriesDataArray = [
   // Somalia
   {
     countryName: 'Somalia',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: 'Laas Geel', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3661,6 +3847,7 @@ export const CountriesDataArray = [
   // South Africa
   {
     countryName: 'South Africa',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       { monumentName: 'Table Mountain', monumentPosition: '' },
@@ -3676,6 +3863,7 @@ export const CountriesDataArray = [
   // South Korea
   {
     countryName: 'South Korea',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       { monumentName: 'Gyeongbokgung Palace', monumentPosition: '' },
@@ -3691,6 +3879,7 @@ export const CountriesDataArray = [
   // South Sudan
   {
     countryName: 'South Sudan',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       { monumentName: 'Boma National Park', monumentPosition: '' },
@@ -3706,6 +3895,7 @@ export const CountriesDataArray = [
   // Spain
   {
     countryName: 'Spain',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: 'Alhambra', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3719,6 +3909,7 @@ export const CountriesDataArray = [
   // Sri Lanka
   {
     countryName: 'Sri Lanka',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: 'Sigiriya', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3732,6 +3923,7 @@ export const CountriesDataArray = [
   // Sudan
   {
     countryName: 'Sudan',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: 'Meroë', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3745,6 +3937,7 @@ export const CountriesDataArray = [
   // Suriname
   {
     countryName: 'Suriname',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       { monumentName: 'Central Suriname Nature Reserve', monumentPosition: '' },
@@ -3760,6 +3953,7 @@ export const CountriesDataArray = [
   // Swaziland
   {
     countryName: 'Swaziland',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3773,6 +3967,7 @@ export const CountriesDataArray = [
   // Sweden
   {
     countryName: 'Sweden',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       { monumentName: 'Drottningholm Palace', monumentPosition: '' },
@@ -3788,6 +3983,7 @@ export const CountriesDataArray = [
   // Switzerland
   {
     countryName: 'Switzerland',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [
       { monumentName: 'Château de Chillon', monumentPosition: '' },
@@ -3803,6 +3999,7 @@ export const CountriesDataArray = [
   // Syria
   {
     countryName: 'Syria',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: 'Palmyra', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3816,6 +4013,7 @@ export const CountriesDataArray = [
   // Taiwan
   {
     countryName: 'Taiwan',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: 'Taroko Gorge', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3829,6 +4027,7 @@ export const CountriesDataArray = [
   // Tajikistan
   {
     countryName: 'Tajikistan',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       { monumentName: 'Pamir Mountains', monumentPosition: '' },
@@ -3844,6 +4043,7 @@ export const CountriesDataArray = [
   // Tanzania
   {
     countryName: 'Tanzania',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       { monumentName: 'Mount Kilimanjaro', monumentPosition: '' },
@@ -3859,6 +4059,7 @@ export const CountriesDataArray = [
   // Thailand
   {
     countryName: 'Thailand',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       { monumentName: 'Historic City of Ayutthaya', monumentPosition: '' },
@@ -3874,6 +4075,7 @@ export const CountriesDataArray = [
   // Timor-Leste
   {
     countryName: 'Timor-Leste',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3887,6 +4089,7 @@ export const CountriesDataArray = [
   // Togo
   {
     countryName: 'Togo',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: 'Koutammakou', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3900,6 +4103,7 @@ export const CountriesDataArray = [
   // Tonga
   {
     countryName: 'Tonga',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [
       { monumentName: "Ha'amonga 'a Maui Trilithon", monumentPosition: '' },
@@ -3935,6 +4139,7 @@ export const CountriesDataArray = [
   // Trinidad and Tobago
   {
     countryName: 'Trinidad and Tobago',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: 'Pitch Lake', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3953,6 +4158,7 @@ export const CountriesDataArray = [
   // Tunisia
   {
     countryName: 'Tunisia',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       { monumentName: 'Amphitheatre of El Jem', monumentPosition: '' },
@@ -3968,6 +4174,7 @@ export const CountriesDataArray = [
   // Turkey
   {
     countryName: 'Turkey',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [{ monumentName: 'Hagia Sophia', monumentPosition: '' }],
     countryBorderPaths: [
@@ -3986,6 +4193,7 @@ export const CountriesDataArray = [
   // Turkmenistan
   {
     countryName: 'Turkmenistan',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       { monumentName: 'Darvaza Gas Crater', monumentPosition: '' },
@@ -4001,6 +4209,7 @@ export const CountriesDataArray = [
   // Turks and Caicos Islands
   {
     countryName: 'Turks and Caicos Islands',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -4024,6 +4233,7 @@ export const CountriesDataArray = [
   // Tuvalu
   {
     countryName: 'Tuvalu',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [
       { monumentName: 'Funafuti Conservation Area', monumentPosition: '' },
@@ -4039,6 +4249,7 @@ export const CountriesDataArray = [
   // Uganda
   {
     countryName: 'Uganda',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [
       {
@@ -4057,6 +4268,7 @@ export const CountriesDataArray = [
   // Ukraine
   {
     countryName: 'Ukraine',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       { monumentName: 'Saint Sophia Cathedral', monumentPosition: '' },
@@ -4072,6 +4284,7 @@ export const CountriesDataArray = [
   // United Arab Emirates
   {
     countryName: 'United Arab Emirates',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       {
@@ -4090,6 +4303,7 @@ export const CountriesDataArray = [
   // United Kingdom
   {
     countryName: 'United Kingdom',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [{ monumentName: 'Stonehenge', monumentPosition: '' }],
     countryBorderPaths: [
@@ -4108,6 +4322,7 @@ export const CountriesDataArray = [
   // United States
   {
     countryName: 'United States',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       { monumentName: 'Statue of Liberty', monumentPosition: '' },
@@ -4168,6 +4383,7 @@ export const CountriesDataArray = [
   // United States Virgin Islands
   {
     countryName: 'United States Virgin Islands',
+    visited: false,
     defaultColor: countryColoursArray[0],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -4191,6 +4407,7 @@ export const CountriesDataArray = [
   // Uruguay
   {
     countryName: 'Uruguay',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [
       {
@@ -4209,6 +4426,7 @@ export const CountriesDataArray = [
   // Uzbekistan
   {
     countryName: 'Uzbekistan',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       {
@@ -4227,6 +4445,7 @@ export const CountriesDataArray = [
   // Vanuatu
   {
     countryName: 'Vanuatu',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       { monumentName: 'Chief Roi Mata’s Domain', monumentPosition: '' },
@@ -4327,6 +4546,7 @@ export const CountriesDataArray = [
   // Vatican City
   {
     countryName: 'Vatican City',
+    visited: false,
     defaultColor: countryColoursArray[4],
     countryMonuments: [
       { monumentName: "St. Peter's Basilica", monumentPosition: '' },
@@ -4338,6 +4558,7 @@ export const CountriesDataArray = [
   // Venezuela
   {
     countryName: 'Venezuela',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [{ monumentName: 'Angel Falls', monumentPosition: '' }],
     countryBorderPaths: [
@@ -4351,6 +4572,7 @@ export const CountriesDataArray = [
   // Vietnam
   {
     countryName: 'Vietnam',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: 'Ha Long Bay', monumentPosition: '' }],
     countryBorderPaths: [
@@ -4364,6 +4586,7 @@ export const CountriesDataArray = [
   // Western Sahara
   {
     countryName: 'Western Sahara',
+    visited: false,
     defaultColor: countryColoursArray[1],
     countryMonuments: [{ monumentName: '', monumentPosition: '' }],
     countryBorderPaths: [
@@ -4377,6 +4600,7 @@ export const CountriesDataArray = [
   // Yemen
   {
     countryName: 'Yemen',
+    visited: false,
     defaultColor: countryColoursArray[2],
     countryMonuments: [
       { monumentName: 'Old City of Sanaa', monumentPosition: '' },
@@ -4392,6 +4616,7 @@ export const CountriesDataArray = [
   // Zambia
   {
     countryName: 'Zambia',
+    visited: false,
     defaultColor: countryColoursArray[3],
     countryMonuments: [
       { monumentName: 'Victoria Falls', monumentPosition: '' },
@@ -4407,6 +4632,7 @@ export const CountriesDataArray = [
   // Zimbabwe
   {
     countryName: 'Zimbabwe',
+    visited: false,
     defaultColor: countryColoursArray[5],
     countryMonuments: [
       {
