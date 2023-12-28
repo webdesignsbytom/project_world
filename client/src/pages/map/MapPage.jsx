@@ -88,6 +88,10 @@ function MapPage() {
     navigate('/login', { replace: true });
   };
 
+  const skipToNextImage = () => {
+    console.log('skipping next image');
+  }
+
   return (
     <div className='grid font-poppins shadow-[inset_-12px_-8px_40px_#46464690] h-screen max-h-screen overflow-hidden'>
       {/* Main */}
@@ -136,6 +140,7 @@ function MapPage() {
                 activeCountry={activeCountry}
                 handleMouseOver={handleMouseOver}
                 handleMouseLeave={handleMouseLeave}
+                onclick={skipToNextImage}
               />
             ))
           )}

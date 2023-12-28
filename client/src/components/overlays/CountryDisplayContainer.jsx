@@ -12,6 +12,7 @@ function CountryDisplayContainer({ tooltipPosition, hoveredCountry, audioRef }) 
       setCurrentIndex((prevIndex) => (prevIndex + 1) % TempImageArray.length);
     }, 5000);
   }, []);
+  
 
   return (
     <section
