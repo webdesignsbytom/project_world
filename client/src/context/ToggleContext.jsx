@@ -9,6 +9,7 @@ const ToggleContextProvider = ({ children }) => {
   // Account Setup
   const [userHasSetUpAccount, setUserHasSetUpAccount] = useState(false);
   const [accountSetupIsOpen, setAccountSetupIsOpen] = useState(false);
+  const [uploadImagesIsOpen, setUploadImagesIsOpen] = useState(false);
   // Display booleans
   const [settingsMenuIsOpen, setSettingsMenuIsOpen] = useState(false);
   const [statsDisplayIsOpen, setStatsDisplayIsOpen] = useState(true);
@@ -40,6 +41,10 @@ const ToggleContextProvider = ({ children }) => {
     setOwnerBannerIsVisible(true);
   };
 
+  const toggleUploadImagesContainer = () => {
+    setUploadImagesIsOpen(!uploadImagesIsOpen);
+  };
+
   return (
     <ToggleContext.Provider
       value={{
@@ -65,6 +70,9 @@ const ToggleContextProvider = ({ children }) => {
         ownerBannerIsVisible,
         setOwnerBannerIsVisible,
         closeSetUpContainerAndStart,
+        uploadImagesIsOpen,
+        setUploadImagesIsOpen,
+        toggleUploadImagesContainer,
       }}
     >
       {children}

@@ -10,7 +10,7 @@ export const UserContext = React.createContext();
 const UserContextProvider = ({ children }) => {
   const [user, setUser] = useState({
     id: 4,
-    hasSetUp: false,
+    hasSetUp: true,
   });
 
   const [token, setToken] = useState(

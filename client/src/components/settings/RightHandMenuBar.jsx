@@ -6,7 +6,7 @@ import { UserContext } from '../../context/UserContext';
 
 function RightHandMenuBar() {
   const { setUser } = useContext(UserContext);
-  const { setActiveNav, muteUnmuteMusic, openSettingsContainer, toggleStatsDisplay } =
+  const { setActiveNav, muteUnmuteMusic, openSettingsContainer, toggleStatsDisplay, toggleUploadImagesContainer } =
     useContext(ToggleContext);
 
   let navigate = useNavigate();
@@ -34,6 +34,13 @@ function RightHandMenuBar() {
         <div
           onClick={toggleStatsDisplay}
           title='Hide Stats Display'
+          className='outline outline-1 outline-black rounded-full text-xl p-1 bg-blue-400 hover:brightness-110 cursor-pointer'
+        >
+          <span>⚙️</span>
+        </div>
+        <div
+          onClick={toggleUploadImagesContainer}
+          title='Upload Images'
           className='outline outline-1 outline-black rounded-full text-xl p-1 bg-blue-400 hover:brightness-110 cursor-pointer'
         >
           <span>⚙️</span>

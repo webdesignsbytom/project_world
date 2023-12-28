@@ -18,6 +18,7 @@ import { CountriesDataArray } from '../../utils/data/CountriesData';
 // Images
 import PinIcon from '../../assets/images/svg/pin.svg';
 import AccountSetUpContainer from '../../components/settings/AccountSetUpContainer';
+import UploadImagesContainer from '../../components/overlays/UploadImagesContainer';
 
 function MapPage() {
   const {
@@ -31,6 +32,8 @@ function MapPage() {
     setRightHandMenuBarIsVisible,
     ownerBannerIsVisible,
     setOwnerBannerIsVisible,
+    uploadImagesIsOpen,
+    setUploadImagesIsOpen,
   } = useContext(ToggleContext);
   const { user } = useContext(UserContext);
 
@@ -122,6 +125,8 @@ function MapPage() {
         {settingsMenuIsOpen && <SettingsContainer />}
         {/* Stats container */}
         {statsDisplayIsOpen && <StatsDisplayContainer />}
+        {/* Upload images */}
+        {uploadImagesIsOpen && <UploadImagesContainer />}
 
         {/* Owner banner */}
         {ownerBannerIsVisible && <OwnerBanner />}
