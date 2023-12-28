@@ -27,35 +27,35 @@ function RightHandMenuBar() {
         <div
           onClick={openSettingsContainer}
           title='Open Settings'
-          className='outline outline-1 outline-black rounded-full text-xl p-1 bg-blue-400 hover:brightness-110 cursor-pointer'
+          className='outline outline-1 outline-black rounded-full text-xl p-1 bg-blue-400 hover:brightness-110 cursor-pointer no__highlights'
         >
           <span>⚙️</span>
         </div>
         <div
           onClick={toggleStatsDisplay}
           title='Hide Stats Display'
-          className='outline outline-1 outline-black rounded-full text-xl p-1 bg-blue-400 hover:brightness-110 cursor-pointer'
+          className='outline outline-1 outline-black rounded-full text-xl p-1 bg-blue-400 hover:brightness-110 cursor-pointer no__highlights'
         >
           <span>⚙️</span>
         </div>
         <div
           onClick={toggleUploadImagesContainer}
           title='Upload Images'
-          className='outline outline-1 outline-black rounded-full text-xl p-1 bg-blue-400 hover:brightness-110 cursor-pointer'
+          className='outline outline-1 outline-black rounded-full text-xl p-1 bg-blue-400 hover:brightness-110 cursor-pointer no__highlights'
         >
           <span>⚙️</span>
         </div>
         <div
           onClick={muteUnmuteMusic}
           title='Mute Music'
-          className='outline outline-1 outline-black rounded-full text-xl p-1 bg-blue-400 hover:brightness-110 cursor-pointer'
+          className='outline outline-1 outline-black rounded-full text-xl p-1 bg-blue-400 hover:brightness-110 cursor-pointer no__highlights'
         >
           <span>⚙️</span>
         </div>
         <div
           onClick={logoutUser}
           title='Log Out'
-          className='outline outline-1 outline-black rounded-full text-xl p-1 bg-blue-400 hover:brightness-110 cursor-pointer'
+          className='outline outline-1 outline-black rounded-full text-xl p-1 bg-blue-400 hover:brightness-110 cursor-pointer no__highlights'
         >
           <span>⚙️</span>
         </div>
