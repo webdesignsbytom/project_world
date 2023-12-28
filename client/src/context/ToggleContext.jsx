@@ -35,6 +35,9 @@ const ToggleContextProvider = ({ children }) => {
 
   const closeSetUpContainerAndStart = () => {
     setAccountSetupIsOpen(false);
+    setStatsDisplayIsOpen(true);
+    setRightHandMenuBarIsVisible(true);
+    setOwnerBannerIsVisible(true);
   };
 
   return (

@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { TempImageArray } from '../../utils/data/TempImagesArray';
 import Music1 from '../../assets/images/temp/music.mp3'
 
+
 function CountryDisplayContainer({ tooltipPosition, hoveredCountry, audioRef }) {
   const [tempDataArray, setTempDataArray] = useState(TempImageArray);
   const [currentIndex, setCurrentIndex] = useState(0);
