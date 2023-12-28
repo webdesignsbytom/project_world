@@ -22,18 +22,19 @@ const ToggleContextProvider = ({ children }) => {
   };
 
   const muteUnmuteMusic = () => {
-    console.log('XXXX');
     setMusicIsMuted(!musicIsMuted);
   };
 
   const openSettingsContainer = () => {
-    console.log('openSettingsContainer');
     setSettingsMenuIsOpen(!settingsMenuIsOpen);
   };
 
   const toggleStatsDisplay = () => {
-    console.log('openSettingsContainer');
     setStatsDisplayIsOpen(!statsDisplayIsOpen);
+  };
+
+  const closeSetUpContainerAndStart = () => {
+    setAccountSetupIsOpen(false);
   };
 
   return (
@@ -60,6 +61,7 @@ const ToggleContextProvider = ({ children }) => {
         setRightHandMenuBarIsVisible,
         ownerBannerIsVisible,
         setOwnerBannerIsVisible,
+        closeSetUpContainerAndStart,
       }}
     >
       {children}

@@ -1,7 +1,7 @@
 import React from 'react';
-import BirthCountrySelectP1 from '../../utils/BirthCountrySelectP1';
-import FavoriteCountrySelectP1 from '../../utils/FavoriteCountrySelectP1';
-import GenderSelectP1 from '../../utils/GenderSelectP1';
+import BirthCountrySelectP1 from '../../utils/user/BirthCountrySelectP1';
+import FavoriteCountrySelectP1 from '../../utils/user/FavoriteCountrySelectP1';
+import GenderSelectP1 from '../../utils/user/GenderSelectP1';
 
 function SinglePersonForm({ handleSubmitSinglePersonForm }) {
   const handleChange = (event) => {
@@ -68,6 +68,11 @@ function SinglePersonForm({ handleSubmitSinglePersonForm }) {
           <label className='text-xs'>Favorite Country:</label>
           <FavoriteCountrySelectP1 handleChange={handleChange} />
         </div>
+      </div>
+
+      {/* Personal Data */}
+      <div className='pb-1 pt-2'>
+        <label>Personal Data</label>
       </div>
 
       {/* Hobbies */}

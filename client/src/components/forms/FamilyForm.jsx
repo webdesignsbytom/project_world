@@ -1,7 +1,7 @@
 import React from 'react';
 
-function FamilyForm() {
-  return <div>FamilyForm</div>;
+function FamilyForm({ handleSubmitFamilyForm }) {
+  return <form onSubmit={handleSubmitFamilyForm}>FamilyForm</form>;
 }
 
 export default FamilyForm;

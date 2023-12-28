@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+// Components
 import SelectUserType from '../setup/SelectUserType';
 import EnterUserData from '../setup/EnterUserData';
+import SubmitAndSetUp from '../setup/SubmitAndSetUp';
 
 function AccountSetUpContainer() {
   const [currentSetupSection, setCurrentSetupSection] = useState(0);
   const [accountData, setAccountData] = useState({
     accountUserType: '',
   });
+
   console.log('accountData', accountData);
 
   const selectUserTypeFromMenu = (event) => {
@@ -44,7 +47,15 @@ function AccountSetUpContainer() {
 
           {/* Select user type */}
           {currentSetupSection === 1 && (
-            <EnterUserData accountData={accountData} />
+            <EnterUserData
+              accountData={accountData}
+              setCurrentSetupSection={setCurrentSetupSection}
+            />
+          )}
+
+          {/* Select user type */}
+          {currentSetupSection === 2 && (
+            <SubmitAndSetUp accountData={accountData} />
           )}
         </section>
       </div>

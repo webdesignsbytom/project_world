@@ -3,10 +3,22 @@ import SinglePersonForm from '../forms/SinglePersonForm';
 import CouplesForm from '../forms/CouplesForm';
 import FamilyForm from '../forms/FamilyForm';
 
-function EnterUserData({ accountData }) {
+function EnterUserData({ accountData, setCurrentSetupSection }) {
   const handleSubmitSinglePersonForm = (e) => {
     e.preventDefault();
+    setCurrentSetupSection(2)
   };
+
+  const handleSubmitCouplesForm = (e) => {
+    e.preventDefault();
+    setCurrentSetupSection(2)
+  };
+
+  const handleSubmitFamilyForm = (e) => {
+    e.preventDefault();
+    setCurrentSetupSection(2)
+  };
+
   return (
     <section className='grid grid-rows-reg gap-2 h-full overflow-y-scroll'>
       <div className='text-center'>
@@ -21,10 +33,14 @@ function EnterUserData({ accountData }) {
         )}
 
         {/* Couples Form */}
-        {accountData.accountUserType === 'couple' && <CouplesForm />}
+        {accountData.accountUserType === 'couple' && (
+          <CouplesForm handleSubmitCouplesForm={handleSubmitCouplesForm} />
+        )}
 
         {/* Family Form */}
-        {accountData.accountUserType === 'family' && <FamilyForm />}
+        {accountData.accountUserType === 'family' && (
+          <FamilyForm handleSubmitFamilyForm={handleSubmitFamilyForm} />
+        )}
       </section>
     </section>
   );
