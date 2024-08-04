@@ -4,7 +4,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import client from '../../api/client';
 import LoadingSpinner from '../../components/utils/LoadingSpinner';
 // Utils
-import CountrySelect from '../../utils/CountrySelect';
+import CountrySelect from '../../utils/user/CountrySelect';
+// Constants
+import { LOGIN_PAGE_URL } from '../../utils/Constants';
 
 function RegisterForm() {
   const [registerFormData, setRegisterFormData] = useState({
@@ -23,7 +25,7 @@ function RegisterForm() {
   let navigate = useNavigate();
 
   const loginPage = () => {
-    navigate('/login', { replace: true });
+    navigate(LOGIN_PAGE_URL, { replace: true });
   };
 
   const handleSubmitRegisterForm = (event) => {

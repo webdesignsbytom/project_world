@@ -1,8 +1,10 @@
 import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { UserContext } from '../../context/UserContext';
 // Context
 import { ToggleContext } from '../../context/ToggleContext';
+import { UserContext } from '../../context/UserContext';
+// Constants
+import { HOME_PAGE_URL, MAP_PAGE_URL } from '../../utils/Constants';
 
 function HomePage() {
   const { setActiveNav } = useContext(ToggleContext);
@@ -11,7 +13,7 @@ function HomePage() {
   let navigate = useNavigate();
 
   useEffect(() => {
-    setActiveNav('/')
+    setActiveNav(HOME_PAGE_URL)
 
     if (user) {
       navigateToMapPage()
@@ -19,7 +21,7 @@ function HomePage() {
   }, [user])
 
   const navigateToMapPage = () => {
-    navigate('/world-map', { replace: true });
+    navigate(MAP_PAGE_URL, { replace: true });
   };
 
   return (

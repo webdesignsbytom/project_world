@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import client from '../api/client';
 import LoggedInUser from '../utils/LoggedInUser';
 import { useNavigate } from 'react-router-dom';
+import { MAP_PAGE_URL } from '../utils/Constants';
 // Context
 export const UserContext = React.createContext();
 
@@ -46,7 +47,7 @@ const UserContextProvider = ({ children }) => {
   }, []);
 
   const navigateToMapPage = () => {
-    navigate('/world-map', { replace: true });
+    navigate(MAP_PAGE_URL, { replace: true });
   };
 
   return (

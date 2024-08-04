@@ -19,6 +19,7 @@ import { CountriesDataArray } from '../../utils/data/CountriesData';
 import PinIcon from '../../assets/images/svg/pin.svg';
 import AccountSetUpContainer from '../../components/settings/AccountSetUpContainer';
 import UploadImagesContainer from '../../components/overlays/UploadImagesContainer';
+import { LOGIN_PAGE_URL } from '../../utils/Constants';
 
 function MapPage() {
   const {
@@ -112,7 +113,7 @@ function MapPage() {
   let navigate = useNavigate();
 
   const loginPage = () => {
-    navigate('/login', { replace: true });
+    navigate(LOGIN_PAGE_URL, { replace: true });
   };
 
   return (

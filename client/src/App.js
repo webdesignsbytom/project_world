@@ -1,23 +1,20 @@
 import { Route, Routes } from 'react-router-dom';
-import { useContext } from 'react';
 // Pages
 import HomePage from './pages/home/HomePage';
 import LoginPage from './users/login/LoginPage';
 import RegisterPage from './users/register/RegisterPage';
-import Error404 from './pages/error/Error404';
-// Context
-import { UserContext } from './context/UserContext';
 import MapPage from './pages/map/MapPage';
+import Error404 from './pages/error/Error404';
+// Constants
+import { HOME_PAGE_URL, LOGIN_PAGE_URL, MAP_PAGE_URL, SIGN_UP_PAGE_URL } from './utils/Constants';
 
 function App() {
-  const { user } = useContext(UserContext);
-
   return (
     <Routes>
-      <Route path='/' index element={<HomePage />} />
-      <Route path='/login' element={<LoginPage />} />
-      <Route path='/world-map' element={<MapPage />} />
-      <Route path='/sign-up' element={<RegisterPage />} />
+      <Route path={HOME_PAGE_URL} index element={<HomePage />} />
+      <Route path={MAP_PAGE_URL} element={<MapPage />} />
+      <Route path={LOGIN_PAGE_URL} element={<LoginPage />} />
+      <Route path={SIGN_UP_PAGE_URL} element={<RegisterPage />} />
       <Route path='*' element={<Error404 />} />
     </Routes>
   );
