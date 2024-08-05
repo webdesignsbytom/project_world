@@ -1,12 +1,13 @@
 // Images
-import OldMap1 from '../../assets/images/backgrounds/aged_map_background_ships_compasses.png'
-import cat from '../../assets/images/pages/404cat.png'
+import OldMapBackground from '../../assets/images/backgrounds/aged_map_background_ships_compasses.png'
+import JupiterBackground from '../../assets/images/backgrounds/jupiter_bands_style_map_background.png'
+import GalaxyBackground from '../../assets/images/backgrounds/galaxy_style_hubble_deep_field_background_map.png'
 
 export const DisplaySettingsArray = [
   {
     name: 'old_map',
     title: 'Old Map',
-    backgroundImage: OldMap1,
+    backgroundImage: OldMapBackground,
     styleSettings: {
       backgroundColour: 'bg-[#dcbc90]',
       altBackgroundColour: 'bg-red-500',
@@ -14,9 +15,9 @@ export const DisplaySettingsArray = [
     }
   },
   {
-    name: 'old_map2',
-    title: 'Old Map2',
-    backgroundImage: cat,
+    name: 'jupiter_clouds',
+    title: 'Jupiter Clouds',
+    backgroundImage: JupiterBackground,
     styleSettings: {
       backgroundColour: 'bg-[#dcbc90]',
       altBackgroundColour: 'bg-white',
@@ -24,9 +25,9 @@ export const DisplaySettingsArray = [
     }
   },
   {
-    name: 'old_map3',
-    title: 'Old Map3',
-    backgroundImage: OldMap1,
+    name: 'galaxy',
+    title: 'Galaxy',
+    backgroundImage: GalaxyBackground,
     styleSettings: {
       backgroundColour: 'bg-blue-500',
       altBackgroundColour: 'bg-white',
