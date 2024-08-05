@@ -10,11 +10,8 @@ function AccountSetUpContainer() {
     accountUserType: '',
   });
 
-  console.log('accountData', accountData);
-
   const selectUserTypeFromMenu = (event) => {
     const { id } = event.target;
-    console.log('id: ', id);
 
     setAccountData({
       ...accountData,

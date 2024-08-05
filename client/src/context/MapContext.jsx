@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 // Data
 import { DisplaySettingsArray } from '../utils/map/MapData';
+import { CountriesVistingDataArray } from '../utils/data/CountriesData';
 
 // Context
 export const MapContext = React.createContext();
@@ -14,7 +15,8 @@ const MapContextProvider = ({ children }) => {
     rightQatMenu: true,
     settingsMenuIsOpen: false,
     statisticsContainer: true,
-    welcomeContainer: true,
+    welcomeContainer: false,
+    helpContainer: true,
     imagesContainer: false,
     animatedSea: false,
     antarcticaMode: false,
@@ -22,8 +24,10 @@ const MapContextProvider = ({ children }) => {
     realTimeSettings: true,
     countryInfoDisplayIsOpen: false,
     countryListContainer: true,
+    countriesVisited: CountriesVistingDataArray,
     isMuted: true,
   });
+
 
   const toggleMapSettingsContainer = () => {
     setMapPageSettings({
@@ -50,6 +54,13 @@ const MapContextProvider = ({ children }) => {
     setMapPageSettings({
       ...mapPageSettings,
       imagesContainer: !mapPageSettings.imagesContainer,
+    });
+  };
+  
+  const toggleHelpSettingsContainer = () => {
+    setMapPageSettings({
+      ...mapPageSettings,
+      helpContainer: !mapPageSettings.helpContainer,
     });
   };
 
@@ -92,7 +103,7 @@ const MapContextProvider = ({ children }) => {
         toggleWelcomeMessageContainer,
         toggleMapSettingsContainer,
         toggleCountryInfoContainer,
-        toggleCountryListContainer
+        toggleCountryListContainer,toggleHelpSettingsContainer
       }}
     >
       {children}

@@ -6,7 +6,6 @@ import GenderSelectP1 from '../../utils/user/GenderSelectP1';
 function SinglePersonForm({ handleSubmitSinglePersonForm }) {
   const handleChange = (event) => {
     const { name, value } = event.target;
-    console.log('value', value);
   };
 
   return (

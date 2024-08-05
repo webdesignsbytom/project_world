@@ -16,7 +16,6 @@ import {
   MAP_PAGE_URL,
   SIGN_UP_PAGE_URL,
 } from './utils/Constants';
-import MapPage2 from './pages/map/MapPage2';
 
 function App() {
   return (
@@ -27,7 +26,6 @@ function App() {
       <Route path={SIGN_UP_PAGE_URL} element={<RegisterPage />} />
       <Route path={ADMIN_PAGE_URL} element={<AdminPage />} />
       <Route path={DEV_PAGE_URL} element={<DeveloperPage />} />
-      <Route path='test' element={<MapPage2 />} />
       <Route path='*' element={<Error404 />} />
     </Routes>
   );

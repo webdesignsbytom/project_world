@@ -8,7 +8,6 @@ function SubmitAndSetUp({ accountData }) {
   const { closeSetUpContainerAndStart } = useContext(ToggleContext);
 
   useEffect(() => {
-    console.log('AAAccountData', accountData);
   }, []);
 
   return (

@@ -19,7 +19,7 @@ function StatisticsContainer() {
       onDoubleClick={toggleStatsContainer}
     >
       <div
-        className={`py-1 px-2 rounded-lg ${mapPageSettings.selectedStyle.styleSettings.backgroundColour} border-solid border-black border-2 text-black font-medium`}
+        className={`py-1 px-2 rounded-lg ${mapPageSettings.selectedStyle.styleSettings.backgroundColour} border-solid border-black border-2 text-black font-medium shadow-2xl`}
       >
         <article>
           <div className='text-center underline'>

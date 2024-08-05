@@ -17,11 +17,12 @@ function MapSettings() {
     setMapPageSettings((prevSettings) => ({
       ...prevSettings,
       selectedStyle: style,
+      animatedSea: style.name === 'animated',
     }));
   };
-  
+
   return (
-    <section className='grid bg-yellow-200 p-4 h-fit gap-2'>
+    <section className='grid p-4 h-fit gap-2'>
       <div className='flex items-center'>
         <span className='flex-1'>Display Longitude and Latitude</span>
         <label className='switch'>
@@ -56,7 +57,7 @@ function MapSettings() {
         </label>
       </div>
       <div className='flex items-center'>
-        <span className='flex-1'>Mouse Over Container</span>
+        <span className='flex-1'>Mouse Over slideshow Container</span>
         <label className='switch'>
           <input
             type='checkbox'
@@ -78,38 +79,44 @@ function MapSettings() {
         </label>
       </div>
 
-      <div className='h-1 bg-gray-500'></div>
+      <div className='h-[2px] bg-gray-400'></div>
 
       <section className='grid'>
         <div className='grid py-1'>Map Style</div>
-        <section className='grid grid-cols-3'>
-        {DisplaySettingsArray.map((display, index) => (
-            <div key={index} className='grid'>
-              <div>
-                {display.backgroundImage ? (
-                  <img
-                    src={display.backgroundImage}
-                    alt={display.title}
-                    className='max-w-[200px] w-[200px] h-auto'
-                  />
-                ) : (
-                  <div className='max-w-[200px] w-[200px] h-auto'></div>
-                )}
+        <div className='grid h-full overflow-y-auto'>
+          <section className='grid grid-cols-3 gap-y-6 h-fit'>
+            {DisplaySettingsArray.map((display, index) => (
+              <div key={index} className='grid'>
+                <div className='grid justify-center'>
+                  {display.backgroundImage ? (
+                    <img
+                      src={display.backgroundImage}
+                      alt={display.title}
+                      className='max-w-[200px] w-[200px] h-[120px]'
+                    />
+                  ) : (
+                    <div
+                      className={`max-w-[200px] w-[200px] h-[120px] ${display.styleSettings.altBackgroundColour}`}
+                    ></div>
+                  )}
+                </div>
+                <div className='flex justify-center items-center'>
+                  <span className='mr-2'>{display.title}</span>
+                  <label className='switch'>
+                    <input
+                      type='checkbox'
+                      checked={
+                        mapPageSettings.selectedStyle.name === display.name
+                      }
+                      onChange={() => handleStyleChange(display)}
+                    />
+                    <span className='slider'></span>
+                  </label>
+                </div>
               </div>
-              <div className='flex justify-center items-center'>
-                <span className='mr-2'>{display.title}</span>
-                <label className='switch'>
-                  <input
-                    type='checkbox'
-                    checked={mapPageSettings.selectedStyle.name === display.name}
-                    onChange={() => handleStyleChange(display)}
-                  />
-                  <span className='slider'></span>
-                </label>
-              </div>
-            </div>
-          ))}
-        </section>
+            ))}
+          </section>
+        </div>
       </section>
     </section>
   );

@@ -10,7 +10,6 @@ function CouplesForm({ handleSubmitCouplesForm }) {
     
   const handleChange = (event) => {
     const { name, value } = event.target;
-    console.log('value', value);
   };
 
   return (

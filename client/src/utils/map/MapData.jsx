@@ -5,6 +5,16 @@ import GalaxyBackground from '../../assets/images/backgrounds/galaxy_style_hubbl
 
 export const DisplaySettingsArray = [
   {
+    name: 'animated',
+    title: 'Animated',
+    backgroundImage: null,
+    styleSettings: {
+      backgroundColour: 'bg-white',
+      altBackgroundColour: 'bg-blue-500',
+      buttonColour: 'bg-white'
+    }
+  },
+  {
     name: 'old_map',
     title: 'Old Map',
     backgroundImage: OldMapBackground,
