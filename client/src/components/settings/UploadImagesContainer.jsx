@@ -1,21 +1,21 @@
 import React, { useContext } from 'react';
-// Icons
-import { IoCloseCircleOutline } from 'react-icons/io5';
 // Context
 import { MapContext } from '../../context/MapContext';
+// Icons
+import { IoCloseCircleOutline } from 'react-icons/io5';
 
-function CountryInformationContainer() {
-  const { mapPageSettings, toggleCountryInfoContainer } = useContext(MapContext);
-
+function UploadImagesContainer() {
+  const { mapPageSettings, toggleUploadImagesContainer } =
+    useContext(MapContext);
   return (
     <section
       className={`grid absolute z-40 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-1/2 w-1/2 ${mapPageSettings.selectedStyle.styleSettings.backgroundColour} rounded-lg shadow-xl`}
     >
-      <div className='grid grid-rows-reg relative'>
+      <div className='relative grid outline outline-1 outline-black rounded-lg'>
         {/* Close button */}
         <button
           className='absolute grid right-4 top-4'
-          onClick={toggleCountryInfoContainer}
+          onClick={toggleUploadImagesContainer}
         >
           <IoCloseCircleOutline
             size={35}
@@ -23,9 +23,10 @@ function CountryInformationContainer() {
           />
         </button>
 
+        {/* Main content */}
         <article className='grid text-center'>
           <div className='pt-4'>
-            <h4 className='text-xl font-poppins font-medium'>Country info</h4>
+            <h4 className='text-xl font-poppins font-medium'>Upload Images</h4>
           </div>
         </article>
       </div>
@@ -33,4 +34,4 @@ function CountryInformationContainer() {
   );
 }
 
-export default CountryInformationContainer;
+export default UploadImagesContainer;

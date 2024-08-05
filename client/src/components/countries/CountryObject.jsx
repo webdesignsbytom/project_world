@@ -1,6 +1,4 @@
 import React from 'react';
-// Images
-import PinIcon from '../../assets/images/svg/pin2.svg';
 
 function CountryObject({
   country,
@@ -31,7 +29,7 @@ function CountryObject({
           }
           onMouseOver={() => handleMouseOver(territory.id)}
           onMouseLeave={handleMouseLeave}
-          // onMouseUp={() => exploreCountry(territory.id)}
+          onMouseUp={() => exploreCountry(territory.id)}
         />
       </g>
     </>

@@ -3,16 +3,21 @@ import React, { useContext, useState } from 'react';
 import { CountriesDataArray } from '../../utils/data/CountriesData';
 // Functions
 import { createLongAndLatLines } from '../../utils/map/MapFunctions';
-// Components
-import CountryObject from '../../components/countries/CountryObject';
 // Context
 import { MapContext } from '../../context/MapContext';
+// Components
+import CountryObject from '../../components/countries/CountryObject';
 import SettingsMainContainer from '../../components/settings/SettingsMainContainer';
 import RightSideQatToolbar from '../../components/settings/RightSideQatToolbar';
 import StatisticsContainer from '../../components/overlays/StatisticsContainer';
+import UploadImagesContainer from '../../components/settings/UploadImagesContainer';
+import WelcomeBackContainer from '../../components/overlays/WelcomeBackContainer';
+import CountryInformationContainer from '../../components/overlays/CountryInformationContainer';
+import CountriesListContainer from '../../components/overlays/CountriesListContainer';
 
 function MapPage2() {
-  const { mapPageSettings } = useContext(MapContext);
+  const { mapPageSettings, toggleCountryInfoContainer } =
+    useContext(MapContext);
 
   // Mouse position data
   const [activeCountry, setActiveCountry] = useState(null);
@@ -69,7 +74,7 @@ function MapPage2() {
             version='1.2'
             viewBox='0 0 2000 1000'
             xmlns='http://www.w3.org/2000/svg'
-            className='h-full w-full cursor-pointer'
+            className='h-full w-full cursor-pointer no__highlights'
           >
             {/* Long and lat lines */}
             {mapPageSettings.displayLongitudeAndLatitude &&
@@ -89,6 +94,7 @@ function MapPage2() {
                   handleMouseOver={handleMouseOver}
                   handleMouseLeave={handleMouseLeave}
                   visited={country.visited}
+                  exploreCountry={toggleCountryInfoContainer}
                 />
               ))
             )}
@@ -102,8 +108,22 @@ function MapPage2() {
       {/* Right hand settings and other menu */}
       {mapPageSettings.rightQatMenu && <RightSideQatToolbar />}
 
-              {/* Stats container */}
-              {mapPageSettings.statisticsContainer && <StatisticsContainer />}
+      {/* Stats container */}
+      {mapPageSettings.statisticsContainer && <StatisticsContainer />}
+
+      {/* Upload images container */}
+      {mapPageSettings.imagesContainer && <UploadImagesContainer />}
+
+      {/* Welcome back message container */}
+      {mapPageSettings.welcomeContainer && <WelcomeBackContainer />}
+
+      {/* Country list container */}
+      {mapPageSettings.countryListContainer && <CountriesListContainer />}
+
+      {/* Country information container */}
+      {mapPageSettings.countryInfoDisplayIsOpen && (
+        <CountryInformationContainer />
+      )}
     </div>
   );
 }

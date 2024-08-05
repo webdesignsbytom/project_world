@@ -8,10 +8,11 @@ import { TbWorldLatitude } from 'react-icons/tb';
 import { IoCloseCircleOutline } from 'react-icons/io5';
 import { IoArrowBackCircle } from 'react-icons/io5';
 import { ToggleContext } from '../../context/ToggleContext';
+// Context
 import { MapContext } from '../../context/MapContext';
 
 function SettingsMainContainer() {
-  const { mapPageSettings, toggleMapSettings } = useContext(MapContext);
+  const { mapPageSettings, toggleMapSettingsContainer } = useContext(MapContext);
 
   const [selectedSettingsOption, setSelectedSettingsOption] = useState(null);
 
@@ -21,7 +22,7 @@ function SettingsMainContainer() {
 
   return (
     <section
-      className={`grid absolute z-40 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-1/2 w-1/2 ${mapPageSettings.selectedStyle.styleSettings.backgroundColour} rounded-lg shadow-xl`}
+      className={`grid absolute z-40 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-2/3 w-2/3 ${mapPageSettings.selectedStyle.styleSettings.backgroundColour} rounded-lg shadow-xl`}
     >
       <div className='grid grid-rows-reg relative'>
         {/* Back button */}
@@ -35,13 +36,17 @@ function SettingsMainContainer() {
           </div>
         )}
 
-        <div className='absolute grid right-4 top-4'>
+        {/* Close button */}
+        <button
+          className='absolute grid right-4 top-4'
+          onClick={toggleMapSettingsContainer}
+        >
           <IoCloseCircleOutline
-            onClick={toggleMapSettings}
             size={35}
             className='hover:brightness-125 cursor-pointer text-gray-000 hover:shadow-xl rounded-full active:scale-95'
           />
-        </div>
+        </button>
+        
         <article className='grid text-center'>
           <div className='pt-4'>
             <h4 className='text-xl font-poppins font-medium'>Settings</h4>

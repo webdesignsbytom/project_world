@@ -20,12 +20,12 @@ function RightSideQatToolbar() {
     mapPageSettings,
     toggleMusic,
     toggleQatToolbar,
-    toggleMapSettings,
+    toggleMapSettingsContainer,
     toggleStatsContainer,
+    toggleUploadImagesContainer,
   } = useContext(MapContext);
   const { setUser } = useContext(UserContext);
-  const { setActiveNav, toggleStatsDisplay, toggleUploadImagesContainer } =
-    useContext(ToggleContext);
+  const { setActiveNav } = useContext(ToggleContext);
 
   let navigate = useNavigate();
 
@@ -46,7 +46,7 @@ function RightSideQatToolbar() {
       onDoubleClick={toggleQatToolbar}
     >
       <div
-        className={`grid gap-2 border-solid border-black border-2 h-fit w-fit rounded-full ${mapPageSettings.selectedStyle.styleSettings.backgroundColour} px-2 py-4 shadow-lg`}
+        className={`grid gap-2 border-solid border-black border-2 h-fit w-fit rounded-full ${mapPageSettings.selectedStyle.styleSettings.altBackgroundColour} px-2 py-4 shadow-lg`}
       >
         <Link
           to={HOME_PAGE_URL}
@@ -58,7 +58,7 @@ function RightSideQatToolbar() {
           </div>
         </Link>
         <button
-          onClick={toggleMapSettings}
+          onClick={toggleMapSettingsContainer}
           title='Open Settings'
           className={`border-solid border-black border-2 rounded-full text-xl p-1 ${mapPageSettings.selectedStyle.styleSettings.buttonColour} hover:brightness-110 cursor-pointer no__highlights h-[50px] w-[50px] active:scale-95 shadow-lg`}
         >

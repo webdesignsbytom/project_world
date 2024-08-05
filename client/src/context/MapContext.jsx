@@ -8,54 +8,91 @@ export const MapContext = React.createContext();
 
 const MapContextProvider = ({ children }) => {
   const [mapPageSettings, setMapPageSettings] = useState({
-    // displaySettings: displaySettingsArray[0],
     displayLongitudeAndLatitude: true,
     includeLongitudeAndLatitudeText: false,
     selectedStyle: DisplaySettingsArray[0],
-    animatedSea: false,
-    settingsMenuIsOpen: false,
     rightQatMenu: true,
+    settingsMenuIsOpen: false,
     statisticsContainer: true,
+    welcomeContainer: true,
+    imagesContainer: false,
+    animatedSea: false,
+    antarcticaMode: false,
+    mouseOverContainerActive: true,
+    realTimeSettings: true,
+    countryInfoDisplayIsOpen: false,
+    countryListContainer: true,
     isMuted: true,
   });
 
-  const toggleMapSettings = () => {
+  const toggleMapSettingsContainer = () => {
     setMapPageSettings({
       ...mapPageSettings,
-      settingsMenuIsOpen: !mapPageSettings.settingsMenuIsOpen
-    })
-  }
+      settingsMenuIsOpen: !mapPageSettings.settingsMenuIsOpen,
+    });
+  };
 
   const toggleQatToolbar = () => {
     setMapPageSettings({
       ...mapPageSettings,
-      rightQatMenu: !mapPageSettings.rightQatMenu
-    })
-  }
+      rightQatMenu: !mapPageSettings.rightQatMenu,
+    });
+  };
 
   const toggleStatsContainer = () => {
     setMapPageSettings({
       ...mapPageSettings,
-      statisticsContainer: !mapPageSettings.statisticsContainer
-    })
-  }
+      statisticsContainer: !mapPageSettings.statisticsContainer,
+    });
+  };
+
+  const toggleUploadImagesContainer = () => {
+    setMapPageSettings({
+      ...mapPageSettings,
+      imagesContainer: !mapPageSettings.imagesContainer,
+    });
+  };
+
+  const toggleCountryInfoContainer = () => {
+    setMapPageSettings({
+      ...mapPageSettings,
+      countryInfoDisplayIsOpen: !mapPageSettings.countryInfoDisplayIsOpen,
+    });
+  };
+
+  const toggleWelcomeMessageContainer = () => {
+    setMapPageSettings({
+      ...mapPageSettings,
+      welcomeContainer: !mapPageSettings.welcomeContainer,
+    });
+  };
+  const toggleCountryListContainer = () => {
+    setMapPageSettings({
+      ...mapPageSettings,
+      countryListContainer: !mapPageSettings.countryListContainer,
+    });
+  };
 
   const toggleMusic = () => {
     setMapPageSettings({
       ...mapPageSettings,
-      isMuted: !mapPageSettings.isMuted
-    })
-  }
+      isMuted: !mapPageSettings.isMuted,
+    });
+  };
 
   return (
     <MapContext.Provider
       value={{
         mapPageSettings,
         setMapPageSettings,
-        toggleMapSettings,
         toggleMusic,
         toggleQatToolbar,
-        toggleStatsContainer
+        toggleStatsContainer,
+        toggleUploadImagesContainer,
+        toggleWelcomeMessageContainer,
+        toggleMapSettingsContainer,
+        toggleCountryInfoContainer,
+        toggleCountryListContainer
       }}
     >
       {children}

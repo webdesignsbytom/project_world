@@ -11,7 +11,7 @@ import CountryObject from '../../components/countries/CountryObject';
 import CountryInformationContainer from '../../components/overlays/CountryInformationContainer';
 import SettingsMainContainer from '../../components/settings/SettingsMainContainer';
 import AccountSetUpContainer from '../../components/settings/AccountSetUpContainer';
-import UploadImagesContainer from '../../components/overlays/UploadImagesContainer';
+import UploadImagesContainer from '../../components/settings/UploadImagesContainer';
 import StatisticsContainer from '../../components/overlays/StatisticsContainer';
 // Context
 import { UserContext } from '../../context/UserContext';
