@@ -5,6 +5,12 @@ import { UserContext } from '../../context/UserContext';
 import { ToggleContext } from '../../context/ToggleContext';
 // Images
 import LogoImage from '../../assets/images/logos/wdbt-black.svg';
+import {
+  HOME_PAGE_URL,
+  LOGIN_PAGE_URL,
+  MAP_PAGE_URL,
+  SIGN_UP_PAGE_URL,
+} from '../../utils/Constants';
 
 function Navbar() {
   const { user, setUser } = useContext(UserContext);
@@ -15,22 +21,22 @@ function Navbar() {
 
   const logoutUser = (event) => {
     event.preventDefault();
-    setActiveNav('/');
+    setActiveNav(HOME_PAGE_URL);
     toggleNavbarOpenClosed();
     setUser({});
     localStorage.removeItem(process.env.REACT_APP_USER_TOKEN);
 
-    navigate('/', { replace: true });
+    navigate(HOME_PAGE_URL, { replace: true });
   };
 
   return (
     <nav className='h-full relative z-30 grid grid-cols-reg bg-yellow-400 py-2 border-b-2 border-solid border-black'>
       <section className='grid items-center justify-center pl-4'>
-        <Link className='no__highlights' to='/'>
+        <Link className='no__highlights' to={HOME_PAGE_URL}>
           <img
             className='w-10 no__highlights h-10'
             src={LogoImage}
-            alt='Logo'
+            alt='Project world travel history logo'
           />
         </Link>
       </section>
@@ -65,32 +71,62 @@ function Navbar() {
       <section className='hidden lg:grid justify-end'>
         <div className='grid items-center pr-4'>
           <ul className='grid grid-flow-col w-fit justify-end gap-4 font-semibold'>
-            <li className={activeNav === '/' ? 'text-gray-600 hover:text-gray-700 active:scale-95' : 'hover:text-gray-700 active:scale-95'}>
-              <Link className='w-full' to='/'>
+            <li
+              className={
+                activeNav === HOME_PAGE_URL
+                  ? 'text-gray-600 hover:text-gray-700 active:scale-95'
+                  : 'hover:text-gray-700 active:scale-95'
+              }
+            >
+              <Link className='w-full' to={HOME_PAGE_URL}>
                 Home
               </Link>
             </li>
-            <li className={activeNav === '/design' ? 'text-gray-600 hover:text-gray-700 active:scale-95' : 'hover:text-gray-700 active:scale-95'}>
-              <Link className='w-full' to='/design'>
-                Design
+            <li
+              className={
+                activeNav === MAP_PAGE_URL
+                  ? 'text-gray-600 hover:text-gray-700 active:scale-95'
+                  : 'hover:text-gray-700 active:scale-95'
+              }
+            >
+              <Link className='w-full' to={MAP_PAGE_URL}>
+                Map
               </Link>
             </li>
             {!user.email && (
               <>
-                <li className={activeNav === '/login' ? 'text-gray-600 hover:text-gray-700 active:scale-95' : 'hover:text-gray-700 active:scale-95'}>
-                  <Link className='w-full' to='/Login'>
+                <li
+                  className={
+                    activeNav === LOGIN_PAGE_URL
+                      ? 'text-gray-600 hover:text-gray-700 active:scale-95'
+                      : 'hover:text-gray-700 active:scale-95'
+                  }
+                >
+                  <Link className='w-full' to={LOGIN_PAGE_URL}>
                     Login
                   </Link>
                 </li>
-                <li className={activeNav === '/sign-up' ? 'text-gray-600 hover:text-gray-700 active:scale-95' : 'hover:text-gray-700 active:scale-95'}>
-                  <Link className='w-full' to='/sign-up'>
+                <li
+                  className={
+                    activeNav === SIGN_UP_PAGE_URL
+                      ? 'text-gray-600 hover:text-gray-700 active:scale-95'
+                      : 'hover:text-gray-700 active:scale-95'
+                  }
+                >
+                  <Link className='w-full' to={SIGN_UP_PAGE_URL}>
                     Sign Up
                   </Link>
                 </li>
               </>
             )}
             {(user.role === 'ADMIN' || user.role === 'DEVELOPER') && (
-              <li className={activeNav === '/admin' ? 'text-gray-600 hover:text-gray-700 active:scale-95' : 'hover:text-gray-700 active:scale-95'}>
+              <li
+                className={
+                  activeNav === '/admin'
+                    ? 'text-gray-600 hover:text-gray-700 active:scale-95'
+                    : 'hover:text-gray-700 active:scale-95'
+                }
+              >
                 <Link className='w-full' to='/admin'>
                   Admin
                 </Link>
@@ -111,24 +147,24 @@ function Navbar() {
             <ul className='text-center grid bg-black h-fit w-full text-xl'>
               <li
                 className={
-                  activeNav === '/'
+                  activeNav === HOME_PAGE_URL
                     ? 'w-full no__highlights nav__bg hover:bg-green-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
                     : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-500 text-gray-800 font-semibold'
                 }
               >
-                <Link className='w-full' to='/'>
+                <Link className='w-full' to={HOME_PAGE_URL}>
                   Home
                 </Link>
               </li>
               <li
                 className={
-                  activeNav === '/design'
+                  activeNav === MAP_PAGE_URL
                     ? 'w-full no__highlights nav__bg hover:bg-green-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
                     : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-500 text-gray-800 font-semibold'
                 }
               >
-                <Link className='w-full' to='/design'>
-                  Design
+                <Link className='w-full' to={MAP_PAGE_URL}>
+                  Map
                 </Link>
               </li>
 
@@ -136,23 +172,23 @@ function Navbar() {
                 <>
                   <li
                     className={
-                      activeNav === '/login'
+                      activeNav === LOGIN_PAGE_URL
                         ? 'w-full no__highlights nav__bg hover:bg-green-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
                         : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-500 text-gray-800 font-semibold'
                     }
                   >
-                    <Link className='w-full' to='/Login'>
+                    <Link className='w-full' to={LOGIN_PAGE_URL}>
                       Login
                     </Link>
                   </li>
                   <li
                     className={
-                      activeNav === '/sign-up'
+                      activeNav === SIGN_UP_PAGE_URL
                         ? 'w-full no__highlights nav__bg hover:bg-green-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-700 text-gray-800 font-semibold'
                         : 'w-full no__highlights nav__bg hover:bg-blue-500 active:scale-95 grid py-2 outline-2 outline outline-black bg-yellow-500 text-gray-800 font-semibold'
                     }
                   >
-                    <Link className='w-full' to='/sign-up'>
+                    <Link className='w-full' to={SIGN_UP_PAGE_URL}>
                       Sign Up
                     </Link>
                   </li>

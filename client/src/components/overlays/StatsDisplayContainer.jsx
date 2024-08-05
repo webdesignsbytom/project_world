@@ -1,6 +1,6 @@
 import React from 'react';
 
-function StatsDisplayContainer() {
+function StatsDisplayContainer({ closeContainer }) {
   const tempdata = {
     numCountriesVisited: 10,
     numContinentsVisited: 4,
@@ -9,8 +9,8 @@ function StatsDisplayContainer() {
     totalMilesTravelled: 23000,
   };
   return (
-    <section className='absolute left-2 top-2'>
-      <div className='py-1 px-2 rounded-lg bg-green-900 outline outline-1 outline-black text-white'>
+    <section className='absolute grid left-2 top-2 cursor-pointer' title='World travel statistics (double click to close)' onDoubleClick={closeContainer}>
+      <div className='py-1 px-2 rounded-lg bg-green-900 border-solid border-black border-2 text-white'>
         <article>
           <div className='text-center'>
             <h6>Stats</h6>

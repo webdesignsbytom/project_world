@@ -1,23 +1,23 @@
 import React, { useContext, useEffect } from 'react';
 // Images
-import TreeBG from '../../assets/images/pages/404cat.png';
+import CatImage from '../../assets/images/pages/404cat.png';
 // Components
 import Navbar from '../../components/nav/Navbar';
 // Context
 import { ToggleContext } from '../../context/ToggleContext';
 
 function Error404() {
-  const { setActiveNav } = useContext(ToggleContext)
+  const { setActiveNav } = useContext(ToggleContext);
 
   useEffect(() => {
-    setActiveNav('*')
-  }, [])
-  
+    setActiveNav('*');
+  }, []);
+
   return (
     <div className='h-screen overflow-hidden grid bg-gray-50 dark:bg-black dark:text-gray-100'>
-      <section className='grid h-full overflow-hidden grid-rows-reg lg:grid-rows-none lg:grid-cols-reg'>
+      <section className='grid h-full overflow-hidden grid-rows-reg'>
         <Navbar />
-        <div className='font-poppins'>
+        <div className='grid h-screen font-poppins'>
           <main className='relative h-full w-full'>
             <section className='grid absolute w-full text-center h-full items-center justify-center z-10'>
               <section className='grid gap-2'>
@@ -33,7 +33,7 @@ function Error404() {
               </section>
             </section>
             <section className='flex lg:justify-end lg:mr-20'>
-              <img src={TreeBG} alt='lost cat' />
+              <img src={CatImage} alt='Incorrect page url lost cat' />
             </section>
           </main>
         </div>

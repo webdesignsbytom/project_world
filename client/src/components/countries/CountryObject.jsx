@@ -11,6 +11,7 @@ function CountryObject({
   handleMouseOver,
   handleMouseLeave,
   visited,
+  exploreCountry
 }) {
   return (
     <>
@@ -30,6 +31,7 @@ function CountryObject({
           }
           onMouseOver={() => handleMouseOver(territory.id)}
           onMouseLeave={handleMouseLeave}
+          onMouseUp={() => exploreCountry(territory.id)}
         />
       </g>
       {visited && (

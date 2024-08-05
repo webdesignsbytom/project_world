@@ -20,6 +20,7 @@ import PinIcon from '../../assets/images/svg/pin.svg';
 import AccountSetUpContainer from '../../components/settings/AccountSetUpContainer';
 import UploadImagesContainer from '../../components/overlays/UploadImagesContainer';
 import { LOGIN_PAGE_URL } from '../../utils/Constants';
+import CountryInformationContainer from '../../components/overlays/CountryInformationContainer';
 
 function MapPage() {
   const {
@@ -41,6 +42,8 @@ function MapPage() {
   // Countries
   const [countriesArray, setCountriesArray] = useState(CountriesDataArray);
   const [activeCountry, setActiveCountry] = useState(null);
+  const [countryInfoDisplayIsOpen, setCountryInfoDisplayIsOpen] =
+    useState(false);
 
   // Set user and nav
   useEffect(() => {
@@ -116,6 +119,23 @@ function MapPage() {
     navigate(LOGIN_PAGE_URL, { replace: true });
   };
 
+  const exploreCountry = (countryId) => {
+    console.log('AAAAAAAAA');
+    setCountryInfoDisplayIsOpen(true);
+  };
+
+  const closeCountryInfoContainer = () => {
+    console.log('AAAAAAAAA');
+    setCountryInfoDisplayIsOpen(false);
+  };
+
+  const closeStatsContainer = () => {
+    setStatsDisplayIsOpen(false)
+  }
+  const closeUserInfoContainer = () => {
+    setOwnerBannerIsVisible(false)
+  }
+
   return (
     <div className='grid font-poppins shadow-[inset_-12px_-8px_40px_#46464690] h-screen max-h-screen overflow-hidden'>
       {/* Main */}
@@ -125,12 +145,18 @@ function MapPage() {
         {/* Settings container */}
         {settingsMenuIsOpen && <SettingsContainer />}
         {/* Stats container */}
-        {statsDisplayIsOpen && <StatsDisplayContainer />}
+        {statsDisplayIsOpen && <StatsDisplayContainer closeContainer={closeStatsContainer} />}
         {/* Upload images */}
         {uploadImagesIsOpen && <UploadImagesContainer />}
+        {/* Country information */}
+        {countryInfoDisplayIsOpen && (
+          <CountryInformationContainer
+            closeContainer={closeCountryInfoContainer}
+          />
+        )}
 
         {/* Owner banner */}
-        {ownerBannerIsVisible && <OwnerBanner />}
+        {ownerBannerIsVisible && <OwnerBanner closeContainer={closeUserInfoContainer} />}
         {/* Right hand settings and other menu */}
         {rightHandMenuBarIsVisible && <RightHandMenuBar />}
 
@@ -167,6 +193,7 @@ function MapPage() {
                 handleMouseOver={handleMouseOver}
                 handleMouseLeave={handleMouseLeave}
                 visited={country.visited}
+                exploreCountry={exploreCountry}
               />
             ))
           )}
