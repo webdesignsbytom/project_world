@@ -1,15 +1,18 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // Components
-import RightHandMenuBar from '../../components/settings/RightHandMenuBar';
+import RightSideQatToolbar from '../../components/settings/RightSideQatToolbar';
 import OwnerBanner from '../../components/overlays/OwnerBanner';
 import PlaneAnimation from '../../components/animations/PlaneAnimation';
 import MoonAnimation from '../../components/animations/MoonAnimation';
 import SunAnimation from '../../components/animations/SunAnimation';
 import CountryDisplayContainer from '../../components/overlays/CountryDisplayContainer';
 import CountryObject from '../../components/countries/CountryObject';
-import SettingsContainer from '../../components/settings/SettingsContainer';
-import StatsDisplayContainer from '../../components/overlays/StatsDisplayContainer';
+import CountryInformationContainer from '../../components/overlays/CountryInformationContainer';
+import SettingsMainContainer from '../../components/settings/SettingsMainContainer';
+import AccountSetUpContainer from '../../components/settings/AccountSetUpContainer';
+import UploadImagesContainer from '../../components/overlays/UploadImagesContainer';
+import StatisticsContainer from '../../components/overlays/StatisticsContainer';
 // Context
 import { UserContext } from '../../context/UserContext';
 import { ToggleContext } from '../../context/ToggleContext';
@@ -17,10 +20,8 @@ import { ToggleContext } from '../../context/ToggleContext';
 import { CountriesDataArray } from '../../utils/data/CountriesData';
 // Images
 import PinIcon from '../../assets/images/svg/pin.svg';
-import AccountSetUpContainer from '../../components/settings/AccountSetUpContainer';
-import UploadImagesContainer from '../../components/overlays/UploadImagesContainer';
+// Constants
 import { LOGIN_PAGE_URL } from '../../utils/Constants';
-import CountryInformationContainer from '../../components/overlays/CountryInformationContainer';
 
 function MapPage() {
   const {
@@ -30,8 +31,8 @@ function MapPage() {
     setAccountSetupIsOpen,
     setSettingsMenuIsOpen,
     setStatsDisplayIsOpen,
-    rightHandMenuBarIsVisible,
-    setRightHandMenuBarIsVisible,
+    RightSideQatToolbarIsVisible,
+    setRightSideQatToolbarIsVisible,
     ownerBannerIsVisible,
     setOwnerBannerIsVisible,
     uploadImagesIsOpen,
@@ -42,6 +43,7 @@ function MapPage() {
   // Countries
   const [countriesArray, setCountriesArray] = useState(CountriesDataArray);
   const [activeCountry, setActiveCountry] = useState(null);
+  const [isMuted, setIsMuted] = useState(false);
   const [countryInfoDisplayIsOpen, setCountryInfoDisplayIsOpen] =
     useState(false);
 
@@ -61,7 +63,7 @@ function MapPage() {
     setAccountSetupIsOpen(true);
     setSettingsMenuIsOpen(false);
     setStatsDisplayIsOpen(false);
-    setRightHandMenuBarIsVisible(false);
+    setRightSideQatToolbarIsVisible(false);
     setOwnerBannerIsVisible(false);
   };
 
@@ -135,6 +137,13 @@ function MapPage() {
   const closeUserInfoContainer = () => {
     setOwnerBannerIsVisible(false)
   }
+  const closeSettingsContainer = () => {
+    setRightSideQatToolbarIsVisible(false)
+  }
+
+  const toggleMute = () => {
+    setIsMuted(!isMuted)
+  }
 
   return (
     <div className='grid font-poppins shadow-[inset_-12px_-8px_40px_#46464690] h-screen max-h-screen overflow-hidden'>
@@ -143,9 +152,9 @@ function MapPage() {
         {/* First time account set up */}
         {accountSetupIsOpen && <AccountSetUpContainer />}
         {/* Settings container */}
-        {settingsMenuIsOpen && <SettingsContainer />}
+        {settingsMenuIsOpen && <SettingsMainContainer />}
         {/* Stats container */}
-        {statsDisplayIsOpen && <StatsDisplayContainer closeContainer={closeStatsContainer} />}
+        {statsDisplayIsOpen && <StatisticsContainer closeContainer={closeStatsContainer} />}
         {/* Upload images */}
         {uploadImagesIsOpen && <UploadImagesContainer />}
         {/* Country information */}
@@ -158,7 +167,7 @@ function MapPage() {
         {/* Owner banner */}
         {ownerBannerIsVisible && <OwnerBanner closeContainer={closeUserInfoContainer} />}
         {/* Right hand settings and other menu */}
-        {rightHandMenuBarIsVisible && <RightHandMenuBar />}
+        {RightSideQatToolbarIsVisible && <RightSideQatToolbar closeContainer={closeSettingsContainer} isMuted={isMuted} toggleMute={toggleMute} />}
 
         {/* Animations */}
         {/* Animated Plane */}

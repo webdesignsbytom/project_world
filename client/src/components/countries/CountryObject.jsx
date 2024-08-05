@@ -31,17 +31,9 @@ function CountryObject({
           }
           onMouseOver={() => handleMouseOver(territory.id)}
           onMouseLeave={handleMouseLeave}
-          onMouseUp={() => exploreCountry(territory.id)}
+          // onMouseUp={() => exploreCountry(territory.id)}
         />
       </g>
-      {visited && (
-        <image
-          href={PinIcon}
-          className='absolute top-5 right-20'
-          height='30'
-          width='20'
-        />
-      )}
     </>
   );
 }

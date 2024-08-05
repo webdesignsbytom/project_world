@@ -13,7 +13,7 @@ const ToggleContextProvider = ({ children }) => {
   // Display booleans
   const [settingsMenuIsOpen, setSettingsMenuIsOpen] = useState(false);
   const [statsDisplayIsOpen, setStatsDisplayIsOpen] = useState(true);
-  const [rightHandMenuBarIsVisible, setRightHandMenuBarIsVisible] =
+  const [RightSideQatToolbarIsVisible, setRightSideQatToolbarIsVisible] =
     useState(true);
   const [ownerBannerIsVisible, setOwnerBannerIsVisible] = useState(true);
   const [musicIsMuted, setMusicIsMuted] = useState(false);
@@ -26,7 +26,7 @@ const ToggleContextProvider = ({ children }) => {
     setMusicIsMuted(!musicIsMuted);
   };
 
-  const openSettingsContainer = () => {
+  const toggleSettingsContainer = () => {
     setSettingsMenuIsOpen(!settingsMenuIsOpen);
   };
 
@@ -37,7 +37,7 @@ const ToggleContextProvider = ({ children }) => {
   const closeSetUpContainerAndStart = () => {
     setAccountSetupIsOpen(false);
     setStatsDisplayIsOpen(true);
-    setRightHandMenuBarIsVisible(true);
+    setRightSideQatToolbarIsVisible(true);
     setOwnerBannerIsVisible(true);
   };
 
@@ -54,7 +54,7 @@ const ToggleContextProvider = ({ children }) => {
         setActiveNav,
         settingsMenuIsOpen,
         setSettingsMenuIsOpen,
-        openSettingsContainer,
+        toggleSettingsContainer,
         statsDisplayIsOpen,
         setStatsDisplayIsOpen,
         musicIsMuted,
@@ -65,8 +65,8 @@ const ToggleContextProvider = ({ children }) => {
         setUserHasSetUpAccount,
         accountSetupIsOpen,
         setAccountSetupIsOpen,
-        rightHandMenuBarIsVisible,
-        setRightHandMenuBarIsVisible,
+        RightSideQatToolbarIsVisible,
+        setRightSideQatToolbarIsVisible,
         ownerBannerIsVisible,
         setOwnerBannerIsVisible,
         closeSetUpContainerAndStart,
